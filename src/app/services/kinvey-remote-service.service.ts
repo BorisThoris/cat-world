@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const appKey = "kid_rkMvaFdSX"
-const appSecret = "a6ebc734c55d4407b0442a0b17d0a91e"
+const appKey = "YOUR_KINVEY_APP_KEY"
+const appSecret = "YOUR_KINVEY_APP_SECRET"
 const kinveyBaseUrl = "https://baas.kinvey.com/";
 const getAllUrl = kinveyBaseUrl + 'appdata' + "/" + appKey + '/flats';
 //POST /user/:appKey/ HTTP/1.1
