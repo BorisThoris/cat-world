@@ -1,4 +1,4 @@
-# Angular Cat Adoption App
+# Cat World
 
 Historical SoftUni Angular project originally built as **Cat World**.
 
