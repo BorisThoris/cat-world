@@ -1,43 +1,24 @@
 <div id="all">
-<div id="pageInfo">
+  <div id="pageInfo">
+    <div id="everythingDiv">
+      <section class="jumbotron" id="welcomeDiv">
+        <h1 id="title">Cat World</h1>
+        <p class="lead">
+          A legacy Angular adoption demo for browsing cats, reviewing profiles, and connecting rescued pets with better homes.
+        </p>
+        <hr class="my-4">
+        <p>Portfolio showcase with demo data only.</p>
+      </section>
 
-    <!--INFORMATION-->
-  <div id="everythingDiv">
-    
-    <div class="jumbotron" id="welcomeDiv">
-      <legend id="text">Hello, and welcome to Cat World BG!</legend>
-      <p class="lead" id="text">The place that let's you adopt cute kittens AND find nice homes for others at the same time! You can also connect with your fellow cat owners! </p>
-      <hr class="my-4">
-      <p>Non-profit</p>
-      <p>Email: borisbostandzhiev@gmail.com</p>
-      <p id="websites">
-        <!--FACEBOOK-->
-        <a id="Facebook" href="https://www.facebook.com/Gorilla.Gainzzz/?fb_dtsg_ag=Adwp8rfCWb6PgZMg4FzqyyFFlw0i6kfUOokNkEMUiyvKQg%3AAdx46QeJpjDWu7e1Ej9NY5TDSpvzP2g9ztlWbS1yK6Zz1Q" target="_blank">
-        <i class="fa fa-facebook-square" style="font-size:48px;color: #3B5998"></i>
+      <section class="container" id="pictures">
+        <h2 id="catTitle">Featured cat</h2>
+        <a href="/view-cat/{{pic1Adress}}">
+          <div class="overlay">
+            <img id="picture1" src={{pic1}} alt="Featured adoptable cat">
+            <div class="text">Details</div>
+          </div>
         </a>
-      </p>
+      </section>
     </div>
-
-      <!--PICTURES-->
-    <div class = "container" id="pictures">
-      <!-- pic 1 -->
-      <legend id="catTitle">Най-новото коте!</legend>
-      <a href="/view-cat/{{pic1Adress}}">  
-      <div class="overlay">
-      <img id="picture1" src= {{pic1}} height="550" width="700" alt="Paris">
-      <div class="text">Информация</div>
-      </div>
-      </a>
-    </div>
-
   </div>
-
 </div>
-</div>
-
-  
-    
-  
-
-    
-

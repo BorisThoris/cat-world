@@ -77,9 +77,17 @@ Then open:
 http://localhost:4200
 ```
 
+For demo review, the historical Kinvey calls are replaced with in-memory mock users, cat listings, and messages in `src/app/services/kinvey-remote-service.service.ts`. Login works with any non-empty credentials and the app seeds a guest session automatically on first load. The npm scripts set the legacy OpenSSL provider flag needed by Angular/Webpack on modern Node versions.
+
+## Verify
+
+```bash
+npm run build
+```
+
 ## Security / Backend Note
 
-The original student project used a Kinvey backend. Historical app keys/secrets have been removed from the source and replaced with placeholders. To run the backend-backed flows, provide your own Kinvey-compatible app key and secret in `src/app/services/kinvey-remote-service.service.ts`.
+The original student project used a Kinvey backend. Historical app keys/secrets have been removed from the source and replaced with placeholders. The current demo path uses local mock data; to restore backend-backed flows, replace the mock returns in `src/app/services/kinvey-remote-service.service.ts` with Kinvey-compatible HTTP calls and provide your own app key and secret.
 
 Because this is an archived portfolio project, the original hosted backend may no longer exist.
 
@@ -93,3 +101,15 @@ Known limitations:
 - Backend configuration is intentionally removed.
 - Some code and naming reflect its 2019 student-project origin.
 - No modernization/refactor pass has been applied.
+
+## Cloudflare Pages
+
+- Pages project name: `cat-world`
+- GitHub repository: `BorisThoris/cat-world`
+- Production branch: `master`
+- Root directory: `.`
+- Build command: `NODE_OPTIONS=--openssl-legacy-provider npx ng build`
+- Build output directory: `dist/angular-softuni-app`
+- Public URL target: `https://cat-world-4zt.pages.dev/`
+
+Do not enable Cloudflare Access for the demo deployment. Leave frame-blocking headers unset so the portfolio can iframe the public build.
