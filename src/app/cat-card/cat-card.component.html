@@ -1,41 +1,39 @@
-<div  *ngIf=isSorted() class="card" id="catCard">
+<div *ngIf=isSorted() class="card" id="catCard">
 
   <div id="titleWrapper">
-    <h3 id="name">{{cat.name}}<a *ngIf="isCreator()">✔</a></h3>
+    <h3 id="name">{{cat.name}}<a *ngIf="isCreator()">&#10004;</a></h3>
   </div>
 
   <div id="generalWrapper">
     <!--Picture-->
     <div id="catPic">
-        <div id="overlayLeft" (click)="funcMove('left')">←</div>
+        <div id="overlayLeft" (click)="funcMove('left')">&larr;</div>
 
-        <img *ngIf="is1()" id="picture" src= {{cat.imgUrl}}  alt="Smiley face" height="200" width="260">
-        <img *ngIf="is2()" id="picture" src= {{cat.imgUrl2}}  alt="Smiley face " height="200 " width="260 ">
-        <img *ngIf="is3()" id="picture" src= {{cat.imgUrl3}}  alt="Smiley face " height="200 " width="260 ">
-        <img *ngIf="is4()" id="picture" src= {{cat.imgUrl4}}  alt="Smiley face " height="200 " width="260 ">
+        <img *ngIf="is1()" id="picture" src={{cat.imgUrl}} alt="Cat photo" height="200" width="260">
+        <img *ngIf="is2()" id="picture" src={{cat.imgUrl2}} alt="Cat photo" height="200" width="260">
+        <img *ngIf="is3()" id="picture" src={{cat.imgUrl3}} alt="Cat photo" height="200" width="260">
+        <img *ngIf="is4()" id="picture" src={{cat.imgUrl4}} alt="Cat photo" height="200" width="260">
 
-        <div id="overlayRight" (click)="funcMove('right')">→</div>
+        <div id="overlayRight" (click)="funcMove('right')">&rarr;</div>
     </div>
 
     <!--Information-->
     <div id="wrapperInfo">
-      <textarea id="information" class="form-control" rows="6" >{{cat.information}}</textarea>
+      <textarea id="information" class="form-control" rows="6">{{cat.information}}</textarea>
     </div>
   </div>
 
   <div id="etcWrapper">
-    <div id="age">Години:<br/>{{cat.age}}</div>
-    <div id="breed">Порода:<br/>{{cat.breed}}</div>
-    <div id="location">Област:<br/>{{cat.city}}</div>
+    <div id="age">Age:<br/>{{cat.age}}</div>
+    <div id="breed">Breed:<br/>{{cat.breed}}</div>
+    <div id="location">Region:<br/>{{cat.city}}</div>
   </div>
-  
+
   <div id="etc2Wrapper">
-    <div *ngIf="isCastrated()" id="cas">Кастрирана</div>
+    <div *ngIf="isCastrated()" id="cas">Neutered</div>
     <!--Button-->
-    <button type="button" id="infoButton" (click)="loadInfo()" class="btn btn-success">Информация</button>
-    <div *ngIf="isVaccinated()" id="vac">Ваксинирана</div>
+    <button type="button" id="infoButton" (click)="loadInfo()" class="btn btn-success">Details</button>
+    <div *ngIf="isVaccinated()" id="vac">Vaccinated</div>
   </div>
 
-</div> 
-
-
+</div>

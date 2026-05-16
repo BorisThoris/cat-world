@@ -3,104 +3,94 @@
       <div class="card" id="optionsDiv">
         <div id="optionsDiv2" class="card-body">
           <!--Title-->
-          <legend id="postKate">Информация За Котката</legend>
-          
+          <legend id="postKate">Cat Information</legend>
+
           <!--Name-->
           <div class="form-group" id="name">
-            <label for="exampleInputPassword1">Заглавие
+            <label for="exampleInputPassword1">Title
               <br/>
               <input type="String" class="form-control" id="nameField" placeholder="Title" required [(ngModel)]="model.name" name="name">
             </label>
           </div>
           <!--Age-->
           <div class="form-group" id="age">
-              <label for="exampleInputPassword1">Възраст години 
+              <label for="exampleInputPassword1">Age in years
                 <input type="Number" class="form-control" id="ageField" placeholder="Age" required [(ngModel)]="model.age" name="age">
               </label>
           </div>
-          
+
           <div id="wrapperForDescAndNumb">
             <!--Number-->
-            <label for="exampleInputPassword1" id="number"> Номер за връзка <br />
+            <label for="exampleInputPassword1" id="number">Contact number <br />
               <input type="Number" class="form-control" id="numberField" placeholder="Number" required [(ngModel)]="model.contactNumber" name="contactNumber">
             </label>
-            
+
             <!--Description-->
-            <label for="exampleTextarea" id="informationDesc">Информация 
-              <textarea class="form-control" id="desciption2" placeholder="Може да се промени след като е публикувана" rows="8" required [(ngModel)]="model.information" name="information"></textarea>
+            <label for="exampleTextarea" id="informationDesc">Information
+              <textarea class="form-control" id="desciption2" placeholder="You can update this after publishing" rows="8" required [(ngModel)]="model.information" name="information"></textarea>
             </label>
           </div>
-          
+
           <!--Location-->
           <div class="form-group" id="locationField">
-            <label for="exampleInputPassword1" id="cityField">Регион:
+            <label for="exampleInputPassword1" id="cityField">Region:
               <br />
-              <select id="CitySelector" placeholder="улична" required [(ngModel)]="model.city" name="city">
+              <select id="CitySelector" placeholder="Street" required [(ngModel)]="model.city" name="city">
                 <option *ngFor="let c of cities" [value]="c">{{c}}</option>
               </select>
             </label>
           </div>
-          
+
           <!--Breed-->
           <div class="form-group" id="breedField" >
-            <label for="exampleInputPassword1" id="breedLabel">Порода: <br />
-              <select id="breedSelector" placeholder="улична" required [(ngModel)]="model.breed" name="breed">
+            <label for="exampleInputPassword1" id="breedLabel">Breed: <br />
+              <select id="breedSelector" placeholder="Street" required [(ngModel)]="model.breed" name="breed">
                 <option *ngFor="let b of breeds" [value]="b">{{b}}</option>
               </select>
             </label>
           </div>
-          
+
           <!--ImgUrl-->
           <div class="form-group" id="imgUrl">
-            <label for="exampleInputPassword1" id="imgUrl2">Линк за снимка<br />
-              <input type="text" class="form-control" id="urlField" placeholder="Линк 1" required [(ngModel)]="model.imgUrl" #imgUrl="ngModel" name="imgUrl">
-              <input type="text" class="form-control" id="urlField" placeholder="Линк 2 незадължителен" required [(ngModel)]="model.imgUrl2" #imgUrl="ngModel" name="imgUrl2">
-              <input type="text" class="form-control" id="urlField" placeholder="Линк 3 незадължителен" required [(ngModel)]="model.imgUrl3" #imgUrl="ngModel" name="imgUrl3">
-              <input type="text" class="form-control" id="urlField" placeholder="Линк 4 незадължителен" required [(ngModel)]="model.imgUrl4" #imgUrl="ngModel" name="imgUrl4">
+            <label for="exampleInputPassword1" id="imgUrl2">Image links<br />
+              <input type="text" class="form-control" id="urlField" placeholder="Link 1" required [(ngModel)]="model.imgUrl" #imgUrl="ngModel" name="imgUrl">
+              <input type="text" class="form-control" id="urlField" placeholder="Link 2 optional" required [(ngModel)]="model.imgUrl2" #imgUrl="ngModel" name="imgUrl2">
+              <input type="text" class="form-control" id="urlField" placeholder="Link 3 optional" required [(ngModel)]="model.imgUrl3" #imgUrl="ngModel" name="imgUrl3">
+              <input type="text" class="form-control" id="urlField" placeholder="Link 4 optional" required [(ngModel)]="model.imgUrl4" #imgUrl="ngModel" name="imgUrl4">
             </label>
           </div>
 
           <!--Vacinated-->
           <div class="form-check" id="Vaccinated">
             <label class="form-check-label" >
-              <input class="form-check-input" type="checkbox" value="" checked="" required [(ngModel)]="model.vaccinated" #imgUrl="ngModel" name="vaccinated"> Ваксинирана
+              <input class="form-check-input" type="checkbox" value="" checked="" required [(ngModel)]="model.vaccinated" #imgUrl="ngModel" name="vaccinated"> Vaccinated
             </label>
           </div>
 
           <!--Castrated-->
           <div class="form-check" id="Castrated">
             <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" value="" checked="" required [(ngModel)]="model.castrated" #imgUrl="ngModel" name="castrated"> Кастрирана
+              <input class="form-check-input" type="checkbox" value="" checked="" required [(ngModel)]="model.castrated" #imgUrl="ngModel" name="castrated"> Neutered
             </label>
-          </div>  
-          
+          </div>
+
           <!--Button-->
-          <button type="submit" id="buttonCreatePost" (click)="createCat()" class="btn btn-primary">Създай</button>
+          <button type="submit" id="buttonCreatePost" (click)="createCat()" class="btn btn-primary">Create</button>
         </div>
       </div>
-      
+
       <!--Picture Preview-->
       <div id="catPiture">
-        <legend>Преглед На Снимки</legend>
-        <a *ngIf="is1()"><img src = {{model.imgUrl}}  id="imagePreview2" height="500" width="580" alt="Неправилен link"></a>
-        <a *ngIf="is2()"><img src = {{model.imgUrl2}} id="imagePreview2" height="500" width="580" alt="Неправилен link"></a>
-        <a *ngIf="is3()"><img src = {{model.imgUrl3}} id="imagePreview2" height="500" width="580" alt="Неправилен link"></a>
-        <a *ngIf="is4()"><img src = {{model.imgUrl4}} id="imagePreview2" height="500" width="580" alt="Неправилен link"></a>
+        <legend>Image Preview</legend>
+        <a *ngIf="is1()"><img src={{model.imgUrl}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
+        <a *ngIf="is2()"><img src={{model.imgUrl2}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
+        <a *ngIf="is3()"><img src={{model.imgUrl3}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
+        <a *ngIf="is4()"><img src={{model.imgUrl4}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
         <div id="arrowWrapper">
-        <img (click)="right()" src="http://oi68.tinypic.com/1q1seo.jpg" id="arrowRigth" height="110" width="200" alt="catProfilePic">
+        <img (click)="right()" src="http://oi68.tinypic.com/1q1seo.jpg" id="arrowRigth" height="110" width="200" alt="Next image">
         <legend id="indexNumber">{{imgIndex}}</legend>
-        <img (click)="left()" src="http://oi68.tinypic.com/1q1seo.jpg" id="arrowLeft" height="110" width="200" alt="catProfilePic">
+        <img (click)="left()" src="http://oi68.tinypic.com/1q1seo.jpg" id="arrowLeft" height="110" width="200" alt="Previous image">
         </div>
       </div>
-
-
     </form>
 </div>
-          
-          
-
-
-
-
-  
-  

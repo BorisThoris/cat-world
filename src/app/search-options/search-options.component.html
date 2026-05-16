@@ -1,22 +1,20 @@
-
-
-  <form #form="ngForm">
+<form #form="ngForm">
   <div class="card">
     <div class="card-body">
-      <legend>Търсачка за котета</legend>
-      
+      <legend>Search for cats</legend>
+
       <!--Breed-->
       <div class="form-group" id="breedField">
-        <label for="exampleInputPassword1" id="breedLabel">Порода:<br />
+        <label for="exampleInputPassword1" id="breedLabel">Breed:<br />
           <select id="breedSelector" required [(ngModel)]="model.breed" name="breed">
             <option *ngFor="let b of breeds" [value]="b">{{b}}</option>
           </select>
         </label>
       </div>
-      
+
       <!--Location-->
       <div class="form-group" id="locationField">
-        <label for="exampleInputPassword1" id="cityField">Област:<br />
+        <label for="exampleInputPassword1" id="cityField">Region:<br />
           <select id="CitySelector" required [(ngModel)]="model.city" name="city">
             <option *ngFor="let c of cities" [value]="c">{{c}}</option>
           </select>
@@ -25,32 +23,26 @@
 
       <!--Age-->
       <div id="age">
-        <label for="exampleInputPassword1">Възраст >=</label>
-        <input type="Number" class="form-control" #ageField id="ageField" placeholder="0" required  name="age">
+        <label for="exampleInputPassword1">Age >=</label>
+        <input type="Number" class="form-control" #ageField id="ageField" placeholder="0" required name="age">
       </div>
-      
-      <!--Vacinated-->  
+
+      <!--Vacinated-->
       <div class="form-check" id="Vaccinated">
         <label class="form-check-label" id="VaccinatedField">
-          <input class="form-check-input" type="checkbox" value="" checked="" #vaccinatedCheck  name="vaccinated"> Ваксинирана
+          <input class="form-check-input" type="checkbox" value="" checked="" #vaccinatedCheck name="vaccinated"> Vaccinated
         </label>
       </div>
 
       <!--Castrated-->
       <div class="form-check" id="Castrated">
         <label class="form-check-label" id="CastratedField">
-          <input class="form-check-input"  type="checkbox" value="" checked="" #castratedCheck name="castrated" > Кастрирана
+          <input class="form-check-input" type="checkbox" value="" checked="" #castratedCheck name="castrated"> Neutered
         </label>
       </div>
-      
+
       <!--Button-->
-      <button  (click)="test()" type="submit" id="searchButton" class="btn btn-primary">Търси</button>
+      <button (click)="test()" type="submit" id="searchButton" class="btn btn-primary">Search</button>
     </div>
   </div>
-  </form>
-
-     
-      
-
-      
-
+</form>

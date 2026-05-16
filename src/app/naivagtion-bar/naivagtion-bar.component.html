@@ -1,4 +1,4 @@
-<form #form="ngForm"> 
+<form #form="ngForm">
 <nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="about" id="brand">Cat World</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
@@ -6,55 +6,51 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  
-  
   <div class="collapse navbar-collapse" id="navbarColor03">
     <ul class="navbar-nav mr-auto">
       <!---FOR LOGGED IN USERS -->
       <a *ngIf="isAuth()" class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="about">За Нас</a>
+          <a class="nav-link" href="about">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="create">Качи Котка</a>
+          <a class="nav-link" href="create">Add Cat</a>
         </li>
-        
+
         <li class="nav-item">
-          <a class="nav-link" href="viewAll">Всички Котки</a>
+          <a class="nav-link" href="viewAll">All Cats</a>
         </li>
-  
+
         <li class="nav-item">
-          <a class="nav-link" href="profile">Профил</a>
+          <a class="nav-link" href="profile">Profile</a>
         </li>
-    
+
         <a *ngIf="isAdmin()" class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="admin">Админ</a>
+            <a class="nav-link" href="admin">Admin</a>
           </li>
         </a>
-        
+
         <li class="nav-item">
-          <a class="nav-link" href="messages">Новини</a>
+          <a class="nav-link" href="messages">News</a>
         </li>
-        
+
         <li class="nav-item">
-          <a class="nav-link" href="Inbox">Съобщения</a>
+          <a class="nav-link" href="Inbox">Messages</a>
         </li>
-      
+
         <li class="nav-item">
-          <a  id="logout" class="nav-link" (click)="Logout()">Изход</a>
+          <a id="logout" class="nav-link" (click)="Logout()">Logout</a>
         </li>
-      
       </a>
-      
 
       <!---FOR GUESTS -->
       <a *ngIf="isGuest()" class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="about">About</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link" href="login">Login</a>
         </li>
@@ -71,13 +67,13 @@
           <a class="nav-link" href="messages">News</a>
         </li>
       </a>
-        
+
       <!---FOR LOGGED OUT USERS -->
       <a *ngIf="isNotAuth()" class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="about">About</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link" href="login">Login</a>
         </li>
@@ -88,54 +84,21 @@
       </a>
     </ul>
 
-    
-    
     <!---Profile Section-->
     <a *ngIf="isAuth()">
-      
       <!--Messaging-->
       <div class="nav-profilePic" id="privateMessages">
-         <a class="nav-link" href="Inbox" id="messagesLabel"> <img id="pmImage" src= "http://www.clker.com/cliparts/1/M/H/m/B/Z/envelope-with-white-letter-hi.png" width="100" height="80"> <a *ngIf="messagesNew()"><b id="numberOfMessages"> {{newMessages}} Непрочетено!</b></a> </a>
-      </div>
-      
-      <!--Profile-->
-      <div class="nav-profilePic" id="profilePic">
-        <a class="nav-link" href="profile">{{username}}: <img id="ProfilePicImage" src= {{imgUrl}} alt="Italian Trulli"  width="100" height="80"></a>
+        <a class="nav-link" href="Inbox" id="messagesLabel">
+          <img id="pmImage" src="http://www.clker.com/cliparts/1/M/H/m/B/Z/envelope-with-white-letter-hi.png" width="100" height="80">
+          <a *ngIf="messagesNew()"><b id="numberOfMessages"> {{newMessages}} unread!</b></a>
+        </a>
       </div>
 
+      <!--Profile-->
+      <div class="nav-profilePic" id="profilePic">
+        <a class="nav-link" href="profile">{{username}}: <img id="ProfilePicImage" src={{imgUrl}} alt="Profile picture" width="100" height="80"></a>
+      </div>
     </a>
   </div>
 </nav>
 </form>
-        
-      
-      
-        
-      
-        
-  
-      
-
-    
-    
-    
-    
-    
-
-
-      
-      
-
-    
-      
-      
-    
-  
-        
-
-      
-        
-      
-      
-      
-      
