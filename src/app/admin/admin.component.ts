@@ -8,12 +8,16 @@ import remote from "../services/kinvey-remote-service.service.js";
 export class AdminComponent implements OnInit {
 
   users
+  accessDenied: boolean;
 
   constructor(private remote: remote) { }
 
   ngOnInit() {
-    if (sessionStorage.getItem("isAdmin") !== "Yes") {
+    this.accessDenied = !this.remote.isAdminUser();
+    if (this.accessDenied) {
       console.log("not admin")
+      this.users = [];
+      return;
     }
     this.remote.GetAllUsers().subscribe((data)=>{
       this.users = data;
@@ -22,6 +26,9 @@ export class AdminComponent implements OnInit {
   }
 
   getUsersAgain(){
+    if (this.accessDenied) {
+      return;
+    }
     this.remote.GetAllUsers().subscribe((data) => {
       this.users = data;
     })

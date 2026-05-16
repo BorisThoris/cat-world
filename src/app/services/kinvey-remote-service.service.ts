@@ -1,12 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { of } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 
 const appKey = "YOUR_KINVEY_APP_KEY"
 const appSecret = "YOUR_KINVEY_APP_SECRET"
 const kinveyBaseUrl = "https://baas.kinvey.com/";
 const getAllUrl = kinveyBaseUrl + 'appdata' + "/" + appKey + '/flats';
 //POST /user/:appKey/ HTTP/1.1
+
+export interface DemoAuthSession {
+  authtoken: string;
+  username: string;
+  userId: string;
+  picUrl: string;
+  isAdmin: string;
+}
 
 const demoUsers = [
   {
@@ -69,18 +77,61 @@ let demoMessages = [
 @Injectable({
   providedIn: 'root'})
 export default class KinveyRemoteServiceService {
+  private authKeys = ['authtoken', 'username', 'userId', 'picUrl', 'profilePic', 'isAdmin'];
+  private sessionSubject = new BehaviorSubject<DemoAuthSession>(this.readSession());
+  sessionChanges = this.sessionSubject.asObservable();
+
   constructor(private http: HttpClient) { }
  
   //MAKE AUTH
   makeAuth(type) {
     return type === 'basic'
       ? 'Basic ' + btoa(appKey + ':' + appSecret)
-      : 'Kinvey ' + localStorage.getItem('authtoken');
+      : 'Kinvey ' + this.getAuthToken();
   }
   
   //IS AUTH
   isAuth() {
-    return localStorage.getItem('authtoken') !== null;
+    return this.getSession() !== null;
+  }
+
+  isLoggedInUser() {
+    let session = this.getSession();
+    return session !== null && session.username !== 'Guest2';
+  }
+
+  isGuestUser() {
+    let session = this.getSession();
+    return session !== null && session.username === 'Guest2';
+  }
+
+  isAdminUser() {
+    let session = this.getSession();
+    return session !== null && session.isAdmin === 'Yes';
+  }
+
+  getSession() {
+    return this.sessionSubject.getValue();
+  }
+
+  getAuthToken() {
+    let session = this.getSession();
+    return session ? session.authtoken : null;
+  }
+
+  getCurrentUserId() {
+    let session = this.getSession();
+    return session ? session.userId : null;
+  }
+
+  getCurrentUsername() {
+    let session = this.getSession();
+    return session ? session.username : null;
+  }
+
+  getCurrentProfilePic() {
+    let session = this.getSession();
+    return session ? session.picUrl : null;
   }
 
   //SAVE SESSION
@@ -89,7 +140,39 @@ export default class KinveyRemoteServiceService {
     localStorage.setItem('username', userData.username);
     localStorage.setItem('userId', userData._id);
     localStorage.setItem('picUrl', userData.profilePic);
+    localStorage.setItem('profilePic', userData.profilePic);
     localStorage.setItem('isAdmin', userData.isAdmin);
+    this.clearSessionStorageAuth();
+    this.sessionSubject.next(this.readSession());
+  }
+
+  clearAuthState() {
+    for (let index in this.authKeys) {
+      localStorage.removeItem(this.authKeys[index]);
+    }
+    this.clearSessionStorageAuth();
+    this.sessionSubject.next(null);
+  }
+
+  private readSession() {
+    let authtoken = localStorage.getItem('authtoken');
+    if (authtoken === null) {
+      return null;
+    }
+
+    return {
+      authtoken: authtoken,
+      username: localStorage.getItem('username'),
+      userId: localStorage.getItem('userId'),
+      picUrl: localStorage.getItem('picUrl') || localStorage.getItem('profilePic'),
+      isAdmin: localStorage.getItem('isAdmin')
+    };
+  }
+
+  private clearSessionStorageAuth() {
+    for (let index in this.authKeys) {
+      sessionStorage.removeItem(this.authKeys[index]);
+    }
   }
 
   //POST
@@ -132,7 +215,7 @@ export default class KinveyRemoteServiceService {
 
   //LOGOUT
   logout() {
-    localStorage.clear();
+    this.clearAuthState();
     return of({ ok: true });
   }
   
@@ -145,7 +228,7 @@ export default class KinveyRemoteServiceService {
 
   //CREATE CAT
   CreateCat(name, breed, age, contactNumber, information, imgUrl, imgUrl2, imgUrl3, imgUrl4, vaccinated, castrated, city) {
-    let obj = { _id: `demo-cat-${Date.now()}`, name, breed, age, contactNumber, information, imgUrl, imgUrl2, imgUrl3, imgUrl4, vaccinated, castrated, city, _acl: { creator: localStorage.getItem('userId') || 'demo-admin' } };
+    let obj = { _id: `demo-cat-${Date.now()}`, name, breed, age, contactNumber, information, imgUrl, imgUrl2, imgUrl3, imgUrl4, vaccinated, castrated, city, _acl: { creator: this.getCurrentUserId() || 'demo-admin' } };
     demoCats = [obj].concat(demoCats);
     return of(obj);
   }

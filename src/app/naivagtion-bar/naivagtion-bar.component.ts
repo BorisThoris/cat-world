@@ -16,7 +16,7 @@ export class NaivagtionBarComponent implements OnInit {
   newMessages: number;
   messages;
   constructor(private remote: remote, private router: Router, private toastr: ToastrService) {
-    this.model = new User(localStorage.getItem("username"), null,localStorage.getItem("picUrl"),null)
+    this.model = new User(this.remote.getCurrentUsername(), null, this.remote.getCurrentProfilePic(), null)
     this.username = this.model.username;
     this.imgUrl = this.model.picUrl;
     this.newMessages;
@@ -27,9 +27,8 @@ export class NaivagtionBarComponent implements OnInit {
     this.remote.logout().subscribe((dataBase)=>{
       console.log("logged out");
       this.toastr.info("Logged out!");
-      localStorage.clear();
       this.router.navigate(['/about']);
-      if (localStorage.length === 0) {
+      if (!this.remote.isAuth()) {
         console.log("lol, inside if")
         this.remote.login("Guest2", "Guest2").subscribe((data) => {
           this.remote.saveSession(data);
@@ -40,8 +39,8 @@ export class NaivagtionBarComponent implements OnInit {
   }
 
   isAuth(){
-    if (localStorage.getItem('authtoken') !== null && localStorage.getItem("username")!=="Guest2"){
-      this.model = new User(localStorage.getItem("username"), null, localStorage.getItem("picUrl"), null)
+    if (this.remote.isLoggedInUser()){
+      this.model = new User(this.remote.getCurrentUsername(), null, this.remote.getCurrentProfilePic(), null)
       this.username = this.model.username;
       this.imgUrl = this.model.picUrl;
       return true;
@@ -50,31 +49,31 @@ export class NaivagtionBarComponent implements OnInit {
   }
 
   isGuest(){
-    if (localStorage.getItem("username") === "Guest2") {
+    if (this.remote.isGuestUser()) {
       return true;
     }
     else return false;
   }
 
   isNotGuest(){
-    if(localStorage.getItem("username")==="Guest2"){
+    if(this.remote.isGuestUser()){
       return false;
     }
   }
 
   isAdmin(){
-    if(localStorage.getItem("isAdmin")==="Yes"){
+    if(this.remote.isAdminUser()){
       return true;
     }
   }
 
 
   isNotAuth(){
-    return localStorage .getItem('authtoken') === null;
+    return !this.remote.isAuth();
   }
 
   ngOnInit() {
-    let id = localStorage.getItem("userId")
+    let id = this.remote.getCurrentUserId()
     this.newMessages=0;
     this.remote.GetAllMessages().subscribe((messages) => {
       for(let index in messages){

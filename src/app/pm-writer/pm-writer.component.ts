@@ -25,7 +25,7 @@ export class PmWriterComponent implements OnInit {
     this.remote.GetCatById(id).subscribe((data)=>{
       this.model.catName = data['name'];
       this.model.receiver = data['_acl'].creator;
-      this.model.sender = localStorage.getItem("userId");
+      this.model.sender = this.remote.getCurrentUserId();
       console.log(this.model);
     })
     
@@ -38,7 +38,7 @@ export class PmWriterComponent implements OnInit {
     let catName = this.model.catName;
     let sender = this.model.sender;
     let open = this.model.open;
-    let senderName = localStorage.getItem("username");
+    let senderName = this.remote.getCurrentUsername();
 
     if(receiver===sender){
       this.toastr.info("Messaging Yourself?");

@@ -35,16 +35,16 @@ export class ViewCatInfoComponent implements OnInit {
    }
       
     isAdmin(){
-      if(localStorage.getItem("isAdmin")==="Yes"){
+      if(this.remote.isAdminUser()){
         return(true);
       }
     }
 
     isAuth(){
       let acl = this.model._acl.creator;
-      let userId = localStorage.getItem("userId");
+      let userId = this.remote.getCurrentUserId();
 
-      if (localStorage.getItem("isAdmin") === "Yes" || acl === userId) {
+      if (this.remote.isAdminUser() || acl === userId) {
         return (true);
       } 
       else{
@@ -70,7 +70,7 @@ export class ViewCatInfoComponent implements OnInit {
     { 
     //VALIDATION
     let acl = this.model._acl.creator;
-    let userId = localStorage.getItem("userId");
+    let userId = this.remote.getCurrentUserId();
 
     //DELETE REQUEST
       if(this.isAdmin() || acl === userId)
@@ -93,7 +93,7 @@ export class ViewCatInfoComponent implements OnInit {
 
       //VARIABLES
       let acl = this.model._acl.creator;
-      let userId = sessionStorage.getItem("userId");
+      let userId = this.remote.getCurrentUserId();
       const id = this.route.snapshot.paramMap.get('id');
       let name = this.model.name;
       let breed = this.model.breed;

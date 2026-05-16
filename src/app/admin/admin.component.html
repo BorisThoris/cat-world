@@ -1,5 +1,10 @@
 <div id="pageInfo">
-  <div id="usersBoard" class="jumbotron">
+  <div *ngIf="accessDenied" id="usersBoard" class="jumbotron">
+    <legend>Admin access required</legend>
+    <p>This demo account cannot view user management data.</p>
+  </div>
+
+  <div *ngIf="!accessDenied" id="usersBoard" class="jumbotron">
     <legend>All Users</legend>
     
     <app-user-profile-card *ngFor="let u of users" [user]="u" (changedUsers)="getUsersAgain($event)"></app-user-profile-card>

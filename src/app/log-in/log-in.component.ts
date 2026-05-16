@@ -31,14 +31,13 @@ export class LogInComponent implements OnInit {
       if(this.model.username === "" || this.model.password === ""){
           this.toastr.error("Fields should not be empty")}
     //LOGIN
-      else if (sessionStorage.length != 0 && sessionStorage.getItem("username")!="Guest2") { this.toastr.error("Already Logged In!"); this.router.navigate(['/viewAll']);}
+      else if (this.remote.isLoggedInUser()) { this.toastr.error("Already Logged In!"); this.router.navigate(['/viewAll']);}
       else{
         this.toastr.info("Logging in!");
         this.remote.login(this.model.username, this.model.password).subscribe((userData) =>
         {
           this.remote.saveSession(userData);
           this.toastr.success("Logged in!");
-          location.reload();
           this.router.navigate(['/about'])
         }, (error: any) => {
           this.toastr.error("LogIn Error");
