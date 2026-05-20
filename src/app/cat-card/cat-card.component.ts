@@ -3,6 +3,7 @@ import { Cat } from '../cat';
 import remote from "../services/kinvey-remote-service.service.js";
 import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router'
+import { ALL_CAT_OPTION } from '../cat-options';
 
 @Component({
   selector: 'app-cat-card',
@@ -71,12 +72,12 @@ export class CatCardComponent implements OnInit {
     let breed = this.searchOptions2['breed'];
     let city = this.searchOptions2['city'];
 
-    if(city==="Всички" && breed==="Всички")
+    if(city === ALL_CAT_OPTION && breed === ALL_CAT_OPTION)
     {
       if (this.cat.age >= searchAge && this.cat.castrated === castrated && this.cat.vaccinated === vaccinated){
         return true}  
     }
-    else if (city==="Всички"){
+    else if (city === ALL_CAT_OPTION){
       if (this.cat.age >= searchAge && this.cat.castrated === castrated && this.cat.vaccinated === vaccinated && this.cat.breed === breed){ 
         return true }
     }

@@ -4,6 +4,7 @@ import remote from "../services/kinvey-remote-service.service.js";
 import { Cat } from '../cat';
 import { Router } from '@angular/router'
 import { ToastrService } from 'ngx-toastr';
+import { CAT_BREEDS, CAT_CITIES } from '../cat-options';
 
 @Component({
   selector: 'app-view-cat-info',
@@ -14,8 +15,8 @@ export class ViewCatInfoComponent implements OnInit {
   model: Cat;
   Cat;
   imgIndex;
-  breeds;
-  cities;
+  breeds = CAT_BREEDS;
+  cities = CAT_CITIES;
   fallbackCatImage = 'assets/demo/cat-01.svg';
 
   @ViewChild('name') name: ElementRef;
@@ -199,32 +200,6 @@ export class ViewCatInfoComponent implements OnInit {
     
 
   ngOnInit() {
-    this.breeds = [
-      "Улична",
-      "Девон рекс",
-      "Герман Рекс",
-      "Манкс",
-      "Шотландска клепоуха котка",
-      "Японски бобтейл",
-      "Ориенталска котка",
-      "Норвежска горска котка",
-      "Персийска котка",
-      "Европейска късокосместа котка",
-      "Мейн Куун",
-      "Сиамска котка",
-      "Кимрик",
-      "Регдол",
-      "Турска ангорска котка",
-      "Сибирска котка",
-      "Сомалийска котка",
-      "Руска синя котка",
-      "Бурманска котка",
-      "Британска късокосместа котка",
-      "Бирманска котка",
-      "Абисинска котка",
-      "Персийска котка",
-    ];
-    this.cities = ["Благоевград", "Бургас", "Варна", "Велико Търново", "Видин", "Враца", "Габрово", "Добрич", "Кърджали", "Кюстендил", "Ловеч", "Монтана", "Пазарджик", "Перник", "Плевен", "Пловдив", "Разград", "Русе", "Силистра", "Сливен", "Смолян", "София", "Стара Загора", "Търговище", "Хасково", "Шумен", "Ямбол"]
     const id = this.route.snapshot.paramMap.get('id');
     //UGLY PASSING DATA FROM DB
     this.remote.GetCatById(id).subscribe((data) => {

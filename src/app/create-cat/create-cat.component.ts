@@ -5,6 +5,7 @@ import { Router } from '@angular/router'
 import { ToastrService } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CAT_BREEDS, CAT_CITIES } from '../cat-options';
 //public name: string,
 //public breed: string,
 //public age: number,
@@ -23,8 +24,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CreateCatComponent implements OnInit {
   model: Cat;
   url: String;
-  breeds;
-  cities;
+  breeds = CAT_BREEDS;
+  cities = CAT_CITIES;
   picUrl;
   imgIndex;
   fallbackCatImage = 'assets/demo/cat-01.svg';
@@ -145,34 +146,8 @@ export class CreateCatComponent implements OnInit {
 
 
   ngOnInit() {
-    this.breeds = [
-      "Улична",
-      "Девон рекс",
-      "Герман Рекс",
-      "Манкс",
-      "Шотландска клепоуха котка",
-      "Японски бобтейл",
-      "Ориенталска котка",
-      "Норвежска горска котка",
-      "Персийска котка",
-      "Европейска късокосместа котка",
-      "Мейн Куун",
-      "Сиамска котка",
-      "Кимрик",
-      "Регдол",
-      "Турска ангорска котка",
-      "Сибирска котка",
-      "Сомалийска котка",
-      "Руска синя котка",
-      "Бурманска котка",
-      "Британска късокосместа котка",
-      "Бирманска котка",
-      "Абисинска котка",
-      "Персийска котка",
-    ];  
-    this.cities = ["Благоевград", "Бургас", "Варна", "Велико Търново", "Видин", "Враца", "Габрово", "Добрич", "Кърджали", "Кюстендил", "Ловеч", "Монтана", "Пазарджик", "Перник", "Плевен", "Пловдив", "Разград", "Русе", "Силистра", "Сливен", "Смолян", "София", "Стара Загора", "Търговище", "Хасково", "Шумен", "Ямбол" ]
-    this.model.city ="София";
-    this.model.breed ="Улична";
+    this.model.city = 'Sofia';
+    this.model.breed = 'Street';
     this.imgIndex = 1;
   }
 

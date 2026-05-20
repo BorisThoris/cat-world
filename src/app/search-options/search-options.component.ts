@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Cat } from '../cat';
+import { ALL_CAT_OPTION, CAT_BREEDS, CAT_CITIES } from '../cat-options';
 
 @Component({
   selector: 'app-search-options',
@@ -10,8 +11,8 @@ export class SearchOptionsComponent implements OnInit {
   
   model:Cat;
   options: object;
-  breeds;
-  cities;
+  breeds = [ALL_CAT_OPTION].concat(CAT_BREEDS);
+  cities = [ALL_CAT_OPTION].concat(CAT_CITIES);
   @Output() searchEvent = new EventEmitter<object>();
   @ViewChild('ageField') ageField: ElementRef;
   @ViewChild('vaccinatedCheck') vaccinatedCheck: ElementRef;
@@ -21,7 +22,7 @@ export class SearchOptionsComponent implements OnInit {
   //vaccinatedCheck
   //CONSTRUCTOR
   constructor() {
-    this.model = new Cat("","Всички",0,null,null,null, null, null,"Всички")
+    this.model = new Cat('', ALL_CAT_OPTION, 0, null, null, null, null, null, ALL_CAT_OPTION)
   }
   
   
@@ -50,40 +51,9 @@ export class SearchOptionsComponent implements OnInit {
     let castrated = this.castratedCheck.nativeElement.checked;
     this.model.castrated = castrated;
     this.model.vaccinated = vaccinated;
-    
-    //BREEDS AND CITIES
-    this.breeds = [
-      "Всички",
-      "Улична",
-      "Девон рекс",
-      "Герман Рекс",
-      "Манкс",
-      "Шотландска клепоуха котка",
-      "Японски бобтейл",
-      "Ориенталска котка",
-      "Норвежска горска котка",
-      "Персийска котка",
-      "Европейска късокосместа котка",
-      "Мейн Куун",
-      "Сиамска котка",
-      "Кимрик",
-      "Регдол",
-      "Турска ангорска котка",
-      "Сибирска котка",
-      "Сомалийска котка",
-      "Руска синя котка",
-      "Бурманска котка",
-      "Британска късокосместа котка",
-      "Бирманска котка",
-      "Абисинска котка",
-      "Персийска котка",
-    ];  
-    this.cities = [
-      "Всички", "Благоевград", "Бургас", "Варна", "Велико Търново", "Видин", "Враца", "Габрово", "Добрич", "Кърджали", "Кюстендил", "Ловеч", "Монтана", "Пазарджик", "Перник", "Плевен", "Пловдив", "Разград", "Русе", "Силистра", "Сливен", "Смолян", "София", "Стара Загора", "Търговище", "Хасково", "Шумен", "Ямбол"]
-    
     //EMITTING MODEL
     this.model.age = parseInt(this.ageField.nativeElement.value);
-    this.model.city = "Всички"; this.model.breed = "Всички";
+    this.model.city = ALL_CAT_OPTION; this.model.breed = ALL_CAT_OPTION;
     console.log(this.model);
     this.options = this.model;
     this.searchEvent.emit(this.options);
