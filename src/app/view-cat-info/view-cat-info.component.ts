@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import remote from "../services/kinvey-remote-service.service.js";
 import { Cat } from '../cat';
@@ -14,23 +14,12 @@ import { CAT_BREEDS, CAT_CITIES } from '../cat-options';
 export class ViewCatInfoComponent implements OnInit {
   model: Cat;
   Cat;
-  imgIndex;
+  imgIndex = 0;
+  imageUrls = [];
+  canEdit = false;
   breeds = CAT_BREEDS;
   cities = CAT_CITIES;
   fallbackCatImage = 'assets/demo/cat-01.svg';
-
-  @ViewChild('name') name: ElementRef;
-  @ViewChild('age') age: ElementRef;
-  @ViewChild('number') number: ElementRef;
-  @ViewChild('breed') breed: ElementRef;
-  @ViewChild('city') city: ElementRef;
-  @ViewChild('info') info: ElementRef;
-  @ViewChild('castrated') castrated: ElementRef;
-  @ViewChild('vaccinated') vaccinated: ElementRef;
-  @ViewChild('link') link: ElementRef;
-  @ViewChild('link') link2: ElementRef;
-  @ViewChild('link') link3: ElementRef;
-  @ViewChild('link') link4: ElementRef;
 
   constructor(private route: ActivatedRoute, private remote: remote, private router: Router, private toastr: ToastrService) {
     this.model = new Cat("", "", 0, 0, "", "", "","", "");
@@ -42,40 +31,34 @@ export class ViewCatInfoComponent implements OnInit {
       }
     }
 
-    isAuth(){
-      let acl = this.model._acl.creator;
-      let userId = this.remote.getCurrentUserId();
+    isAuth() {
+      return this.canEdit;
+    }
 
-      if (this.remote.isAdminUser() || acl === userId) {
-        return (true);
-      } 
-      else{
-        this.name.nativeElement.setAttribute('disabled', ''); 
-        this.age.nativeElement.setAttribute('disabled', ''); 
-        this.number.nativeElement.setAttribute('disabled', '');
-        this.breed.nativeElement.setAttribute('disabled', '');
-        this.city.nativeElement.setAttribute('disabled', '');
-        this.info.nativeElement.setAttribute('disabled', '');
-        this.castrated.nativeElement.disabled = true;
-        this.vaccinated.nativeElement.disabled = true;
-        this.link.nativeElement.setAttribute('disabled', '');
-        this.link2.nativeElement.setAttribute('disabled', '');
-        this.link3.nativeElement.setAttribute('disabled', '');
-        this.link4.nativeElement.setAttribute('disabled', '');
-        
-        return(false);
+    getCreatorId() {
+      if (!this.model || !this.model._acl || !this.model._acl.creator) {
+        return null;
       }
+
+      let creator = this.model._acl.creator;
+      return creator._id || creator.username || creator;
+    }
+
+    updateEditState() {
+      let creatorId = this.getCreatorId();
+      let userId = this.remote.getCurrentUserId();
+      this.canEdit = this.remote.isAdminUser() || creatorId === userId;
     }
     
     //DELETING CAT
     deleteFunc()
     { 
     //VALIDATION
-    let acl = this.model._acl.creator;
+    let creatorId = this.getCreatorId();
     let userId = this.remote.getCurrentUserId();
 
     //DELETE REQUEST
-      if(this.isAdmin() || acl === userId)
+      if(this.isAdmin() || creatorId === userId)
         {
           this.toastr.info("Deleting Cat!")
           const id = this.route.snapshot.paramMap.get('id');
@@ -94,7 +77,7 @@ export class ViewCatInfoComponent implements OnInit {
       //VALIDATION
 
       //VARIABLES
-      let acl = this.model._acl.creator;
+      let creatorId = this.getCreatorId();
       let userId = this.remote.getCurrentUserId();
       const id = this.route.snapshot.paramMap.get('id');
       let name = this.model.name;
@@ -103,6 +86,9 @@ export class ViewCatInfoComponent implements OnInit {
       let age = this.model.age;
       let information = this.model.information;
       let imgUrl = this.model.imgUrl;
+      let imgUrl2 = this.model.imgUrl2;
+      let imgUrl3 = this.model.imgUrl3;
+      let imgUrl4 = this.model.imgUrl4;
       
       
       //LOGIC
@@ -119,11 +105,12 @@ export class ViewCatInfoComponent implements OnInit {
         this.toastr.error("Cat Should Be Alive!");
       }
       
-      else if(this.isAdmin() || acl===userId){
+      else if(this.isAdmin() || creatorId===userId){
         //UPDATE REQUEST
         this.toastr.info("Updating   Cat!")
-        this.remote.UpdateCat(name,breed,age,contactNumber,information,imgUrl, id).subscribe((data)=>{
+        this.remote.UpdateCat(name,breed,age,contactNumber,information,imgUrl,imgUrl2,imgUrl3,imgUrl4,this.model.vaccinated,this.model.castrated,this.model.city,id).subscribe((data)=>{
         this.toastr.info("Cat Updated!")
+        this.updateImageUrls();
       }, (error: any) => {
            this.toastr.error("Creation Error");
           })}
@@ -136,9 +123,12 @@ export class ViewCatInfoComponent implements OnInit {
   //INDEX LOGIC
   right() {
     func: {
+      if (this.imageUrls.length === 0) {
+        break func;
+      }
       let index = this.imgIndex;
-      if (index === 4) {
-        this.imgIndex = 1;
+      if (index === this.imageUrls.length - 1) {
+        this.imgIndex = 0;
         break func;
       }
       this.imgIndex++;
@@ -147,46 +137,37 @@ export class ViewCatInfoComponent implements OnInit {
 
   left() {
     func: {
+      if (this.imageUrls.length === 0) {
+        break func;
+      }
       let index = this.imgIndex;
-      if (index === 1) {
-        this.imgIndex = 4;
+      if (index === 0) {
+        this.imgIndex = this.imageUrls.length - 1;
         break func;
       }
       this.imgIndex--;
     }
   }
 
-  //CONDITIONS
-  is1() {
-    let index = this.imgIndex;
-    if (index === 1) {
-      return true;
-    }
-  }
-
-  is2() {
-    let index = this.imgIndex;
-    if (index === 2) {
-      return true;
-    }
-  }
-
-  is3() {
-    let index = this.imgIndex;
-    if (index === 3) {
-      return true;
-    }
-  }
-
-  is4() {
-    let index = this.imgIndex;
-    if (index === 4) {
-      return true;
-    }
-  }
-
   getCatImage(imgUrl) {
     return imgUrl || this.fallbackCatImage;
+  }
+
+  getCurrentImage() {
+    return this.getCatImage(this.imageUrls[this.imgIndex]);
+  }
+
+  updateImageUrls() {
+    this.imageUrls = [
+      this.model.imgUrl,
+      this.model.imgUrl2,
+      this.model.imgUrl3,
+      this.model.imgUrl4
+    ];
+
+    if (this.imgIndex >= this.imageUrls.length) {
+      this.imgIndex = 0;
+    }
   }
 
   useFallbackImage(event) {
@@ -217,11 +198,10 @@ export class ViewCatInfoComponent implements OnInit {
       this.model._acl = this.Cat._acl;
       this.model.castrated = this.Cat.castrated;
       this.model.vaccinated = this.Cat.vaccinated;
-      this.imgIndex = 1;
+      this.imgIndex = 0;
+      this.updateImageUrls();
+      this.updateEditState();
       
-      this.remote.GetUserById(this.model._acl.creator.username).subscribe((data)=>{
-        console.log(data);
-      })
     })
     }
   }

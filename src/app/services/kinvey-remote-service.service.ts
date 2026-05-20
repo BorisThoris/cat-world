@@ -282,8 +282,8 @@ export default class KinveyRemoteServiceService {
   }
   
   //UPDATE CAT BY ID
-  UpdateCat(name, breed, age, contactNumber, information,imgUrl, id){
-    let obj = { name, breed, age, contactNumber, information, imgUrl };
+  UpdateCat(name, breed, age, contactNumber, information, imgUrl, imgUrl2, imgUrl3, imgUrl4, vaccinated, castrated, city, id){
+    let obj = { name, breed, age, contactNumber, information, imgUrl, imgUrl2, imgUrl3, imgUrl4, vaccinated, castrated, city };
     demoCats = demoCats.map(cat => cat._id === id ? Object.assign({}, cat, obj) : cat);
     return of(Object.assign({ _id: id }, obj))
   }

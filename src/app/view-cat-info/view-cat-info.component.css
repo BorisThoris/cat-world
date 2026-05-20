@@ -130,7 +130,8 @@ margin:40px 0px;
 
 
 /* AGE */
-#age{
+#ageMain,
+#contactMain{
     text-align: center;
     width:180px;
     font-size:25px;
@@ -164,7 +165,7 @@ margin:40px 0px;
     text-align:center;
 }
 
-#imgMain{
+.imgMain{
     resize:none;
     text-align:center;
     width:460px;
@@ -182,7 +183,7 @@ margin:40px 0px;
     display:inline-block;
 }
 
-#img{
+.imgLink{
     resize:none;
     height:45px;
 }
@@ -253,7 +254,7 @@ transform: scale(1.20);
     margin:0px 150px;
 }
     
-#imagePreview2{
+.imagePreview{
     border-style:solid;
     border-radius:5%;
     background-color:white;

@@ -6,13 +6,10 @@
   <div id="catPiture">
     <legend>Image Preview</legend>
     <div id="holder">
-      <a *ngIf="is1()"><img [src]="getCatImage(model.imgUrl)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
-      <a *ngIf="is2()"><img [src]="getCatImage(model.imgUrl2)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
-      <a *ngIf="is3()"><img [src]="getCatImage(model.imgUrl3)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
-      <a *ngIf="is4()"><img [src]="getCatImage(model.imgUrl4)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
+      <a><img [src]="getCurrentImage()" (error)="useFallbackImage($event)" class="imagePreview" height="500" width="580" alt="Cat photo"></a>
       <div id="arrowWrapper">
         <img (click)="right()" src="assets/demo/arrow-right.svg" id="arrowRigth" height="110" width="200" alt="Next image">
-        <legend id="indexNumber">{{imgIndex}}</legend>
+        <legend id="indexNumber">{{imgIndex + 1}}</legend>
         <img (click)="left()" src="assets/demo/arrow-right.svg" id="arrowLeft" height="110" width="200" alt="Previous image">
       </div>
     </div>
@@ -26,28 +23,28 @@
       <div id="divsWrapperLeft">
         <!--Title-->
         <legend id="titleMain">Title
-          <textarea #name class="form-control" id="NameArea" rows="1" required [(ngModel)]="model.name" name="name"></textarea>
+          <textarea class="form-control" id="NameArea" rows="1" required [(ngModel)]="model.name" name="name" [disabled]="!canEdit"></textarea>
         </legend>
 
         <!--Age-->
-        <legend id="age">Age in years
-          <input #age type="Number" id="AgeArea" required [(ngModel)]="model.age" name="age">
+        <legend id="ageMain">Age in years
+          <input type="Number" id="AgeArea" required [(ngModel)]="model.age" name="age" [disabled]="!canEdit">
         </legend>
 
         <!--Number-->
-        <legend id="age">Contact number
-          <input #number type="Number" id="NumberArea" required [(ngModel)]="model.contactNumber" name="contactNumber">
+        <legend id="contactMain">Contact number
+          <input type="Number" id="NumberArea" required [(ngModel)]="model.contactNumber" name="contactNumber" [disabled]="!canEdit">
         </legend>
 
         <legend id="breedMain">Breed
-          <select #breed id="BreedArea" rows="1" required [(ngModel)]="model.breed" name="breed">
+          <select id="BreedArea" rows="1" required [(ngModel)]="model.breed" name="breed" [disabled]="!canEdit">
             <option *ngFor="let b of breeds" [value]="b">{{b}}</option>
           </select>
         </legend>
 
         <!--City-->
         <legend id="cityMain">Region
-          <select #city id="cityArea" rows="1" required [(ngModel)]="model.city" name="city">
+          <select id="cityArea" rows="1" required [(ngModel)]="model.city" name="city" [disabled]="!canEdit">
             <option *ngFor="let c of cities" [value]="c">{{c}}</option>
           </select>
         </legend>
@@ -55,7 +52,7 @@
 
       <!--Information-->
       <legend id="info">Information
-        <textarea #info class="form-control" id="infoArea" required [(ngModel)]="model.information" name="information"></textarea>
+        <textarea class="form-control" id="infoArea" required [(ngModel)]="model.information" name="information" [disabled]="!canEdit"></textarea>
       </legend>
     </div>
 
@@ -63,27 +60,27 @@
         <!--Castrated-->
         <div id="Castrated">Neutered
           <div class="form-check">
-            <input #castrated class="form-check-input" id="castrated2" type="checkbox" value="" checked="" required [(ngModel)]="model.castrated" #imgUrl="ngModel" name="castrated">
+            <input class="form-check-input" id="castrated2" type="checkbox" value="" checked="" required [(ngModel)]="model.castrated" #castratedModel="ngModel" name="castrated" [disabled]="!canEdit">
           </div>
         </div>
 
         <!--Vaccinated-->
         <div id="Vaccinated">Vaccinated
           <div class="form-check">
-            <input #vaccinated class="form-check-input" id="vaccinated2" type="checkbox" value="" checked="" required [(ngModel)]="model.vaccinated" #imgUrl="ngModel" name="vaccinated">
+            <input class="form-check-input" id="vaccinated2" type="checkbox" value="" checked="" required [(ngModel)]="model.vaccinated" #vaccinatedModel="ngModel" name="vaccinated" [disabled]="!canEdit">
           </div>
         </div>
     </div>
 
       <!--IMG Links-->
       <legend id="imgTitles">Image Links</legend>
-      <legend id="imgMain"><textarea #link class="form-control" id="img" rows="1" required [(ngModel)]="model.imgUrl" name="imgUrl"></textarea></legend>
-      <legend id="imgMain"><textarea #link2 class="form-control" id="img" rows="1" required [(ngModel)]="model.imgUrl2" name="imgUrl2"></textarea></legend>
-      <legend id="imgMain"><textarea #link3 class="form-control" id="img" rows="1" required [(ngModel)]="model.imgUrl3" name="imgUrl3"></textarea></legend>
-      <legend id="imgMain"><textarea #link4 class="form-control" id="img" rows="1" required [(ngModel)]="model.imgUrl4" name="imgUrl4"></textarea></legend>
+      <legend class="imgMain"><textarea class="form-control imgLink" id="imgUrlPrimary" rows="1" required [(ngModel)]="model.imgUrl" name="imgUrl" [disabled]="!canEdit" (ngModelChange)="updateImageUrls()"></textarea></legend>
+      <legend class="imgMain"><textarea class="form-control imgLink" id="imgUrlSecondary" rows="1" required [(ngModel)]="model.imgUrl2" name="imgUrl2" [disabled]="!canEdit" (ngModelChange)="updateImageUrls()"></textarea></legend>
+      <legend class="imgMain"><textarea class="form-control imgLink" id="imgUrlTertiary" rows="1" required [(ngModel)]="model.imgUrl3" name="imgUrl3" [disabled]="!canEdit" (ngModelChange)="updateImageUrls()"></textarea></legend>
+      <legend class="imgMain"><textarea class="form-control imgLink" id="imgUrlQuaternary" rows="1" required [(ngModel)]="model.imgUrl4" name="imgUrl4" [disabled]="!canEdit" (ngModelChange)="updateImageUrls()"></textarea></legend>
 
       <!--Buttons-->
-      <div *ngIf="isAuth(); else elseBlock" id="buttonWrapper">
+      <div *ngIf="canEdit; else elseBlock" id="buttonWrapper">
         <button type="button" (click)="testFunc()" class="btn btn-success" id="changeButton">Change</button>
         <button type="button" (click)="deleteFunc()" class="btn btn-danger" id="dangerButton">Delete</button>
       </div>
