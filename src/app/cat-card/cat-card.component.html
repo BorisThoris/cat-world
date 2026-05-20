@@ -9,10 +9,10 @@
     <div id="catPic">
         <div id="overlayLeft" (click)="funcMove('left')">&larr;</div>
 
-        <img *ngIf="is1()" id="picture" src={{cat.imgUrl}} alt="Cat photo" height="200" width="260">
-        <img *ngIf="is2()" id="picture" src={{cat.imgUrl2}} alt="Cat photo" height="200" width="260">
-        <img *ngIf="is3()" id="picture" src={{cat.imgUrl3}} alt="Cat photo" height="200" width="260">
-        <img *ngIf="is4()" id="picture" src={{cat.imgUrl4}} alt="Cat photo" height="200" width="260">
+        <img *ngIf="is1()" id="picture" [src]="getCatImage(cat.imgUrl)" (error)="useFallbackImage($event)" alt="Cat photo" height="200" width="260">
+        <img *ngIf="is2()" id="picture" [src]="getCatImage(cat.imgUrl2)" (error)="useFallbackImage($event)" alt="Cat photo" height="200" width="260">
+        <img *ngIf="is3()" id="picture" [src]="getCatImage(cat.imgUrl3)" (error)="useFallbackImage($event)" alt="Cat photo" height="200" width="260">
+        <img *ngIf="is4()" id="picture" [src]="getCatImage(cat.imgUrl4)" (error)="useFallbackImage($event)" alt="Cat photo" height="200" width="260">
 
         <div id="overlayRight" (click)="funcMove('right')">&rarr;</div>
     </div>

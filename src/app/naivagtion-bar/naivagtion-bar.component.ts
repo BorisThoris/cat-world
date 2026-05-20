@@ -13,6 +13,7 @@ export class NaivagtionBarComponent implements OnInit {
   model: User;
   username: string;
   imgUrl: string;
+  fallbackProfileImage = 'assets/demo/profile-avatar.svg';
   newMessages: number;
   messages;
   constructor(private remote: remote, private router: Router, private toastr: ToastrService) {
@@ -94,6 +95,14 @@ export class NaivagtionBarComponent implements OnInit {
     if(this.newMessages===0){
       return false
     } else return true;
+  }
+
+  getProfileImage() {
+    return this.imgUrl || this.fallbackProfileImage;
+  }
+
+  useFallbackProfileImage(event) {
+    event.target.src = this.fallbackProfileImage;
   }
 
 }

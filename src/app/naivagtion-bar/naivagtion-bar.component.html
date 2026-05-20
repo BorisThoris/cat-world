@@ -89,14 +89,14 @@
       <!--Messaging-->
       <div class="nav-profilePic" id="privateMessages">
         <a class="nav-link" href="Inbox" id="messagesLabel">
-          <img id="pmImage" src="http://www.clker.com/cliparts/1/M/H/m/B/Z/envelope-with-white-letter-hi.png" width="100" height="80">
+          <img id="pmImage" src="assets/demo/envelope.svg" width="100" height="80" alt="Messages">
           <a *ngIf="messagesNew()"><b id="numberOfMessages"> {{newMessages}} unread!</b></a>
         </a>
       </div>
 
       <!--Profile-->
       <div class="nav-profilePic" id="profilePic">
-        <a class="nav-link" href="profile">{{username}}: <img id="ProfilePicImage" src={{imgUrl}} alt="Profile picture" width="100" height="80"></a>
+        <a class="nav-link" href="profile">{{username}}: <img id="ProfilePicImage" [src]="getProfileImage()" (error)="useFallbackProfileImage($event)" alt="Profile picture" width="100" height="80"></a>
       </div>
     </a>
   </div>

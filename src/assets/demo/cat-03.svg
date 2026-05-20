@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-label="Cat World demo cat">
+  <rect width="640" height="480" fill="#f2eef8"/>
+  <circle cx="320" cy="238" r="148" fill="#c084fc" stroke="#334155" stroke-width="10"/>
+  <path d="M209 181 162 95l98 52M431 181l47-86-98 52" fill="#c084fc" stroke="#334155" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M320 96c35 35 53 82 52 142-35-21-70-21-104 0-1-60 17-107 52-142z" fill="#f8fafc" opacity=".9"/>
+  <circle cx="263" cy="245" r="18" fill="#334155"/><circle cx="377" cy="245" r="18" fill="#334155"/>
+  <path d="M302 293h36l-18 22z" fill="#ef767a"/>
+  <path d="M292 326c17 16 39 16 56 0" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M255 298H135M260 326H155M385 298h120M380 326h105" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
+</svg>

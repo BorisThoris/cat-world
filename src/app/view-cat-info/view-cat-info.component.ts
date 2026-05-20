@@ -16,6 +16,7 @@ export class ViewCatInfoComponent implements OnInit {
   imgIndex;
   breeds;
   cities;
+  fallbackCatImage = 'assets/demo/cat-01.svg';
 
   @ViewChild('name') name: ElementRef;
   @ViewChild('age') age: ElementRef;
@@ -181,6 +182,14 @@ export class ViewCatInfoComponent implements OnInit {
     if (index === 4) {
       return true;
     }
+  }
+
+  getCatImage(imgUrl) {
+    return imgUrl || this.fallbackCatImage;
+  }
+
+  useFallbackImage(event) {
+    event.target.src = this.fallbackCatImage;
   }
     
   sendMessageFunc(){

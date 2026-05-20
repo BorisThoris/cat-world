@@ -27,8 +27,9 @@ export class CreateCatComponent implements OnInit {
   cities;
   picUrl;
   imgIndex;
+  fallbackCatImage = 'assets/demo/cat-01.svg';
   constructor(private remote: remote, private router: Router, private toastr: ToastrService) {
-    this.model = new Cat("", "", 0, 359, "", "https://cdn.pixabay.com/photo/2016/08/10/14/39/cat-1583459__340.png", "", "", "", "https://cdn.pixabay.com/photo/2016/08/10/14/39/cat-1583459__340.png", "https://cdn.pixabay.com/photo/2016/08/10/14/39/cat-1583459__340.png", "https://cdn.pixabay.com/photo/2016/08/10/14/39/cat-1583459__340.png")
+    this.model = new Cat("", "", 0, 359, "", this.fallbackCatImage, "", "", "", "assets/demo/cat-02.svg", "assets/demo/cat-03.svg", "assets/demo/cat-04.svg")
     this.url = this.model.imgUrl;
    }
 
@@ -80,6 +81,14 @@ export class CreateCatComponent implements OnInit {
   //ON ERROR
   standby(){
     this.toastr.info("Incorrect image link!")
+  }
+
+  getCatImage(imgUrl) {
+    return imgUrl || this.fallbackCatImage;
+  }
+
+  useFallbackImage(event) {
+    event.target.src = this.fallbackCatImage;
   }
 
   //INDEX LOGIC

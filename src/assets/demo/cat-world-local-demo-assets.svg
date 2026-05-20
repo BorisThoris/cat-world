@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Cat World local demo asset sheet">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f4ee"/>
+      <stop offset="1" stop-color="#dfe9e2"/>
+    </linearGradient>
+    <style>
+      .tile{fill:#fff;stroke:#334155;stroke-width:4}
+      .shadow{fill:#d4d4d8;opacity:.45}
+      .face{stroke:#334155;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .eye{fill:#334155}
+      .nose{fill:#ef767a}
+      .whisker{stroke:#64748b;stroke-width:4;stroke-linecap:round}
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g transform="translate(60 55)">
+    <rect class="tile" width="240" height="220" rx="18"/>
+    <ellipse class="shadow" cx="120" cy="182" rx="74" ry="14"/>
+    <path class="face" fill="#f4b860" d="M70 151V91L92 111l28-13 28 13 22-20v60c0 31-22 50-50 50s-50-19-50-50z"/>
+    <circle class="eye" cx="102" cy="143" r="7"/><circle class="eye" cx="138" cy="143" r="7"/>
+    <path class="nose" d="M114 158h12l-6 7z"/>
+    <path class="whisker" d="M95 160H69M95 171H75M145 160h26M145 171h20"/>
+  </g>
+  <g transform="translate(340 55)">
+    <rect class="tile" width="240" height="220" rx="18"/>
+    <ellipse class="shadow" cx="120" cy="182" rx="76" ry="14"/>
+    <path class="face" fill="#94a3b8" d="M65 151V88l26 23 29-13 29 13 26-23v63c0 30-25 50-55 50s-55-20-55-50z"/>
+    <circle class="eye" cx="102" cy="143" r="7"/><circle class="eye" cx="138" cy="143" r="7"/>
+    <path class="nose" d="M114 158h12l-6 7z"/>
+    <path class="whisker" d="M95 160H69M95 171H75M145 160h26M145 171h20"/>
+  </g>
+  <g transform="translate(620 55)">
+    <rect class="tile" width="240" height="220" rx="18"/>
+    <ellipse class="shadow" cx="120" cy="182" rx="76" ry="14"/>
+    <path class="face" fill="#c084fc" d="M66 151V91l24 20 30-14 30 14 24-20v60c0 31-24 50-54 50s-54-19-54-50z"/>
+    <path fill="#f8fafc" d="M91 118c18-13 41-13 58 0-7 13-19 21-29 21s-22-8-29-21z"/>
+    <circle class="eye" cx="102" cy="143" r="7"/><circle class="eye" cx="138" cy="143" r="7"/>
+    <path class="nose" d="M114 158h12l-6 7z"/>
+    <path class="whisker" d="M95 160H69M95 171H75M145 160h26M145 171h20"/>
+  </g>
+  <g transform="translate(900 55)">
+    <rect class="tile" width="240" height="220" rx="18"/>
+    <ellipse class="shadow" cx="120" cy="182" rx="76" ry="14"/>
+    <path class="face" fill="#8dd7cf" d="M67 151V90l24 21 29-13 29 13 24-21v61c0 30-23 50-53 50s-53-20-53-50z"/>
+    <circle class="eye" cx="102" cy="143" r="7"/><circle class="eye" cx="138" cy="143" r="7"/>
+    <path class="nose" d="M114 158h12l-6 7z"/>
+    <path class="whisker" d="M95 160H69M95 171H75M145 160h26M145 171h20"/>
+  </g>
+  <g transform="translate(120 360)">
+    <rect class="tile" width="230" height="230" rx="115"/>
+    <circle cx="115" cy="91" r="44" fill="#94a3b8"/>
+    <path d="M43 196c10-43 38-67 72-67s62 24 72 67" fill="#cbd5e1"/>
+  </g>
+  <g transform="translate(475 390)">
+    <rect class="tile" width="250" height="170" rx="18"/>
+    <path d="M36 48h178v100H36z" fill="#f8fafc" stroke="#334155" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M39 51l86 62 86-62" fill="none" stroke="#334155" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(835 395)" fill="none" stroke="#334155" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 35 25 90l55 55"/>
+    <path d="M155 35l55 55-55 55"/>
+  </g>
+</svg>

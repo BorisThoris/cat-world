@@ -14,7 +14,7 @@
         <h2 id="catTitle">Featured cat</h2>
         <a href="/view-cat/{{pic1Adress}}">
           <div class="overlay">
-            <img id="picture1" src={{pic1}} alt="Featured adoptable cat">
+            <img id="picture1" [src]="pic1 || 'assets/demo/cat-01.svg'" alt="Featured adoptable cat">
             <div class="text">Details</div>
           </div>
         </a>

@@ -13,6 +13,7 @@ export class CatCardComponent implements OnInit {
   @Input() cat: Cat;
   @Input() searchOptions2:object;
   @Output() numberOfCats = new EventEmitter<object>();
+    fallbackCatImage = 'assets/demo/cat-01.svg';
     picUrl;
     index;
     information;
@@ -30,6 +31,14 @@ export class CatCardComponent implements OnInit {
   this.information = this.cat.information;
   let id = this.cat._id;
   this.router.navigate(['/view-cat/' + id])
+  }
+
+  getCatImage(imgUrl) {
+    return imgUrl || this.fallbackCatImage;
+  }
+
+  useFallbackImage(event) {
+    event.target.src = this.fallbackCatImage;
   }
   
   //VALIDATION TESTS  

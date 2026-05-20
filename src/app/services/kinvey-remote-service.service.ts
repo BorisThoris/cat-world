@@ -6,6 +6,14 @@ const appKey = "YOUR_KINVEY_APP_KEY"
 const appSecret = "YOUR_KINVEY_APP_SECRET"
 const kinveyBaseUrl = "https://baas.kinvey.com/";
 const getAllUrl = kinveyBaseUrl + 'appdata' + "/" + appKey + '/flats';
+const demoAssetBase = 'assets/demo/';
+const demoProfileImage = demoAssetBase + 'profile-avatar.svg';
+const demoCatImages = [
+  demoAssetBase + 'cat-01.svg',
+  demoAssetBase + 'cat-02.svg',
+  demoAssetBase + 'cat-03.svg',
+  demoAssetBase + 'cat-04.svg'
+];
 //POST /user/:appKey/ HTTP/1.1
 
 export interface DemoAuthSession {
@@ -20,7 +28,7 @@ const demoUsers = [
   {
     _id: 'demo-admin',
     username: 'demo',
-    profilePic: 'https://boygeniusreport.files.wordpress.com/2016/05/scared-surprised-cat-face.jpg?quality=98&strip=all&w=782',
+    profilePic: demoProfileImage,
     isAdmin: 'Yes',
     _kmd: { authtoken: 'demo-token' }
   }
@@ -34,10 +42,10 @@ let demoCats = [
     age: 2,
     contactNumber: 359888111222,
     information: 'Calm indoor cat that is ready for a local adoption demo. This record is hardcoded for offline review.',
-    imgUrl: 'https://cdn.pixabay.com/photo/2016/08/10/14/39/cat-1583459__340.png',
-    imgUrl2: 'https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720__340.jpg',
-    imgUrl3: 'https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736877__340.jpg',
-    imgUrl4: 'https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__340.jpg',
+    imgUrl: demoCatImages[0],
+    imgUrl2: demoCatImages[1],
+    imgUrl3: demoCatImages[2],
+    imgUrl4: demoCatImages[3],
     vaccinated: true,
     castrated: true,
     city: 'Sofia',
@@ -50,10 +58,10 @@ let demoCats = [
     age: 4,
     contactNumber: 359888333444,
     information: 'Playful cat listing used as local mock data when the historical Kinvey backend is unavailable.',
-    imgUrl: 'https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg',
-    imgUrl2: 'https://cdn.pixabay.com/photo/2018/01/28/12/37/cat-3113513__340.jpg',
-    imgUrl3: 'https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720__340.jpg',
-    imgUrl4: 'https://cdn.pixabay.com/photo/2016/08/10/14/39/cat-1583459__340.png',
+    imgUrl: demoCatImages[1],
+    imgUrl2: demoCatImages[2],
+    imgUrl3: demoCatImages[3],
+    imgUrl4: demoCatImages[0],
     vaccinated: false,
     castrated: true,
     city: 'Plovdiv',
@@ -200,7 +208,7 @@ export default class KinveyRemoteServiceService {
     let userData = {
       _id: `demo-user-${Date.now()}`,
       username,
-      profilePic: profilePic || demoUsers[0].profilePic,
+      profilePic: profilePic || demoProfileImage,
       isAdmin: 'No',
       _kmd: { authtoken: 'demo-token' }
     };

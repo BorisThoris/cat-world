@@ -82,14 +82,14 @@
       <!--Picture Preview-->
       <div id="catPiture">
         <legend>Image Preview</legend>
-        <a *ngIf="is1()"><img src={{model.imgUrl}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
-        <a *ngIf="is2()"><img src={{model.imgUrl2}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
-        <a *ngIf="is3()"><img src={{model.imgUrl3}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
-        <a *ngIf="is4()"><img src={{model.imgUrl4}} id="imagePreview2" height="500" width="580" alt="Invalid link"></a>
+        <a *ngIf="is1()"><img [src]="getCatImage(model.imgUrl)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
+        <a *ngIf="is2()"><img [src]="getCatImage(model.imgUrl2)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
+        <a *ngIf="is3()"><img [src]="getCatImage(model.imgUrl3)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
+        <a *ngIf="is4()"><img [src]="getCatImage(model.imgUrl4)" (error)="useFallbackImage($event)" id="imagePreview2" height="500" width="580" alt="Cat photo"></a>
         <div id="arrowWrapper">
-        <img (click)="right()" src="http://oi68.tinypic.com/1q1seo.jpg" id="arrowRigth" height="110" width="200" alt="Next image">
+        <img (click)="right()" src="assets/demo/arrow-right.svg" id="arrowRigth" height="110" width="200" alt="Next image">
         <legend id="indexNumber">{{imgIndex}}</legend>
-        <img (click)="left()" src="http://oi68.tinypic.com/1q1seo.jpg" id="arrowLeft" height="110" width="200" alt="Previous image">
+        <img (click)="left()" src="assets/demo/arrow-right.svg" id="arrowLeft" height="110" width="200" alt="Previous image">
         </div>
       </div>
     </form>
