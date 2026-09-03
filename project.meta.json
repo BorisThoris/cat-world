@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T20:45:31.803Z",
+  "generatedAt": "2026-09-03T21:50:30.105Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -40,61 +40,64 @@
       "lint",
       "e2e",
       "meta",
-      "meta:check"
+      "meta:check",
+      "shots",
+      "social",
+      "social:check"
     ]
   },
   "capture": {
     "route": "/"
   },
   "media": {
-    "source": "portfolio-capture",
-    "directory": "C:/Users/Gaming PC/Desktop/Repos/portfolio/public/project-shots/cat-world/latest",
-    "primary": "/project-shots/cat-world/latest/card.jpg",
+    "source": "repo-local",
+    "directory": "C:/Users/Gaming PC/Desktop/Repos/angular-cat-adoption-app/project-media",
+    "primary": "project-media/card.jpg",
     "images": [
       {
         "profile": "card",
         "file": "card.jpg",
-        "path": "/project-shots/cat-world/latest/card.jpg",
-        "bytes": 115246,
+        "path": "project-media/card.jpg",
+        "bytes": 151276,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-08-27T12:14:48.964Z"
+        "capturedAt": "2026-09-03T21:35:56.666Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
-        "path": "/project-shots/cat-world/latest/desktop.jpg",
-        "bytes": 110506,
+        "path": "project-media/desktop.jpg",
+        "bytes": 146443,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-08-27T12:14:51.595Z"
+        "capturedAt": "2026-09-03T21:36:02.916Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
-        "path": "/project-shots/cat-world/latest/full.jpg",
-        "bytes": 94322,
+        "path": "project-media/full.jpg",
+        "bytes": 124572,
         "width": 1440,
-        "height": 900,
-        "capturedAt": "2026-08-27T12:14:56.735Z"
-      },
-      {
-        "profile": "main",
-        "file": "main.png",
-        "path": "/project-shots/cat-world/main.png",
-        "bytes": 688527,
-        "width": 1440,
-        "height": 1000,
-        "capturedAt": "2026-05-15T20:50:04.424Z"
+        "height": 910,
+        "capturedAt": "2026-09-03T21:36:07.179Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
-        "path": "/project-shots/cat-world/latest/mobile.jpg",
-        "bytes": 52271,
+        "path": "project-media/mobile.jpg",
+        "bytes": 66859,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-08-27T12:14:54.201Z"
+        "capturedAt": "2026-09-03T21:36:05.037Z"
+      },
+      {
+        "profile": "og",
+        "file": "og.jpg",
+        "path": "project-media/og.jpg",
+        "bytes": 130665,
+        "width": 1200,
+        "height": 630,
+        "capturedAt": "2026-09-03T21:36:09.272Z"
       }
     ]
   },
@@ -125,21 +128,21 @@
     "devDependencyCount": 19
   },
   "metrics": {
-    "sourceFiles": 139,
+    "sourceFiles": 141,
     "testFiles": 30,
-    "sourceLines": 16347,
+    "sourceLines": 16808,
     "largestDirectories": [
       {
         "directory": "src",
         "files": 134
       },
       {
-        "directory": "e2e",
-        "files": 3
+        "directory": "scripts",
+        "files": 4
       },
       {
-        "directory": "scripts",
-        "files": 2
+        "directory": "e2e",
+        "files": 3
       }
     ],
     "hasReadme": true,
@@ -158,10 +161,10 @@
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
     "branch": "ai/refine-cat-world-cycle-02",
-    "head": "432ef44",
-    "lastCommitDate": "2026-09-03T23:42:37+03:00",
-    "lastCommitSubject": "Wire up the meta scripts",
-    "commitCount": 37,
+    "head": "eeebc9b",
+    "lastCommitDate": "2026-09-03T23:46:15+03:00",
+    "lastCommitSubject": "Refresh project metadata",
+    "commitCount": 38,
     "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
