@@ -53,6 +53,15 @@ export default {
   analysisNotes:
     "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
 
+  // Where the link-preview card lives: the page head that carries the Open
+  // Graph tags, and the static directory the image is published from.
+  social: {
+    "htmlFile": "src/index.html",
+    "staticDir": "src/assets",
+    "imageName": "og-image.jpg",
+    "imageUrlPath": "/assets/og-image.jpg"
+  },
+
   media: {
     sourceDir: path.join(portfolioRoot, "public", "project-shots", "cat-world", "latest"),
     publicPathPrefix: "/project-shots/cat-world/latest",
