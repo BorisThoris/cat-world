@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T20:39:08.628Z",
+  "generatedAt": "2026-09-03T20:45:31.803Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -127,7 +127,7 @@
   "metrics": {
     "sourceFiles": 139,
     "testFiles": 30,
-    "sourceLines": 16344,
+    "sourceLines": 16347,
     "largestDirectories": [
       {
         "directory": "src",
@@ -158,10 +158,10 @@
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
     "branch": "ai/refine-cat-world-cycle-02",
-    "head": "e1d688f",
-    "lastCommitDate": "2026-05-20T23:43:26+03:00",
-    "lastCommitSubject": "AI refine cat-world: Harden cat detail and update behavior",
-    "commitCount": 35,
+    "head": "432ef44",
+    "lastCommitDate": "2026-09-03T23:42:37+03:00",
+    "lastCommitSubject": "Wire up the meta scripts",
+    "commitCount": 37,
     "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
