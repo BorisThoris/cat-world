@@ -1,0 +1,171 @@
+{
+  "$schema": "./scripts/project.meta.schema.json",
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-03T20:39:08.628Z",
+  "generatedBy": "scripts/generate-project-meta.mjs",
+  "identity": {
+    "slug": "cat-world",
+    "repoName": "angular-cat-adoption-app",
+    "packageName": "cat-world",
+    "version": "0.0.0",
+    "title": "Cat World",
+    "subtitle": "Angular adoption archive",
+    "description": "An archived Angular adoption app preserved as an early full-stack-style portfolio sample with demo-safe backend boundaries.",
+    "tags": [
+      "Angular",
+      "Archive",
+      "Mock Backend"
+    ],
+    "accent": "#e11d48",
+    "classification": "web-app",
+    "showcaseTier": "showcase",
+    "showcaseOrder": 8
+  },
+  "links": {
+    "deploymentUrl": "https://cat-world-git.pages.dev/",
+    "localUrl": "http://127.0.0.1:4108/",
+    "repository": "https://github.com/BorisThoris/cat-world"
+  },
+  "runtime": {
+    "packageManager": "npm",
+    "buildCommand": "npm run build",
+    "buildOutput": "dist",
+    "runCommand": "npm start -- --host 127.0.0.1 --port 4108",
+    "devPort": 4108,
+    "scripts": [
+      "ng",
+      "start",
+      "build",
+      "test",
+      "lint",
+      "e2e",
+      "meta",
+      "meta:check"
+    ]
+  },
+  "capture": {
+    "route": "/"
+  },
+  "media": {
+    "source": "portfolio-capture",
+    "directory": "C:/Users/Gaming PC/Desktop/Repos/portfolio/public/project-shots/cat-world/latest",
+    "primary": "/project-shots/cat-world/latest/card.jpg",
+    "images": [
+      {
+        "profile": "card",
+        "file": "card.jpg",
+        "path": "/project-shots/cat-world/latest/card.jpg",
+        "bytes": 115246,
+        "width": 1600,
+        "height": 900,
+        "capturedAt": "2026-08-27T12:14:48.964Z"
+      },
+      {
+        "profile": "desktop",
+        "file": "desktop.jpg",
+        "path": "/project-shots/cat-world/latest/desktop.jpg",
+        "bytes": 110506,
+        "width": 1440,
+        "height": 900,
+        "capturedAt": "2026-08-27T12:14:51.595Z"
+      },
+      {
+        "profile": "full",
+        "file": "full.jpg",
+        "path": "/project-shots/cat-world/latest/full.jpg",
+        "bytes": 94322,
+        "width": 1440,
+        "height": 900,
+        "capturedAt": "2026-08-27T12:14:56.735Z"
+      },
+      {
+        "profile": "main",
+        "file": "main.png",
+        "path": "/project-shots/cat-world/main.png",
+        "bytes": 688527,
+        "width": 1440,
+        "height": 1000,
+        "capturedAt": "2026-05-15T20:50:04.424Z"
+      },
+      {
+        "profile": "mobile",
+        "file": "mobile.jpg",
+        "path": "/project-shots/cat-world/latest/mobile.jpg",
+        "bytes": 52271,
+        "width": 430,
+        "height": 932,
+        "capturedAt": "2026-08-27T12:14:54.201Z"
+      }
+    ]
+  },
+  "stack": {
+    "framework": "Angular",
+    "language": "TypeScript",
+    "runtimeTargets": [
+      "web"
+    ],
+    "libraries": [
+      {
+        "name": "@angular/core",
+        "version": "^6.1.2"
+      },
+      {
+        "name": "bootstrap",
+        "version": "^3.3.7"
+      },
+      {
+        "name": "typescript",
+        "version": "~2.7.2"
+      }
+    ],
+    "testing": [
+      "karma"
+    ],
+    "dependencyCount": 22,
+    "devDependencyCount": 19
+  },
+  "metrics": {
+    "sourceFiles": 139,
+    "testFiles": 30,
+    "sourceLines": 16344,
+    "largestDirectories": [
+      {
+        "directory": "src",
+        "files": 134
+      },
+      {
+        "directory": "e2e",
+        "files": 3
+      },
+      {
+        "directory": "scripts",
+        "files": 2
+      }
+    ],
+    "hasReadme": true,
+    "hasTests": true,
+    "hasCi": false,
+    "hasDocs": false
+  },
+  "scores": {
+    "priorityScore": 84,
+    "demoabilityScore": 70,
+    "depthScore": 60,
+    "polishScore": 64,
+    "uniquenessScore": 62,
+    "maintenanceScore": 56
+  },
+  "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
+  "git": {
+    "branch": "ai/refine-cat-world-cycle-02",
+    "head": "e1d688f",
+    "lastCommitDate": "2026-05-20T23:43:26+03:00",
+    "lastCommitSubject": "AI refine cat-world: Harden cat detail and update behavior",
+    "commitCount": 35,
+    "remote": "https://github.com/BorisThoris/cat-world.git"
+  },
+  "readme": {
+    "file": "README.md",
+    "heading": "Cat World"
+  }
+}
