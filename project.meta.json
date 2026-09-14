@@ -1,11 +1,11 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T21:36:23.423Z",
+  "generatedAt": "2026-09-14T22:07:24.516Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
-    "repoName": "angular-cat-adoption-app",
+    "repoName": "cat-world",
     "packageName": "cat-world",
     "version": "0.0.0",
     "title": "Cat World",
@@ -133,7 +133,7 @@
   "metrics": {
     "sourceFiles": 143,
     "testFiles": 30,
-    "sourceLines": 17312,
+    "sourceLines": 17321,
     "largestDirectories": [
       {
         "directory": "src",
@@ -164,10 +164,10 @@
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
     "branch": "ai/refine-cat-world-cycle-02",
-    "head": "c94782e",
-    "lastCommitDate": "2026-09-14T23:58:59+03:00",
-    "lastCommitSubject": "Sync the metadata toolkit scripts and regenerate project.meta.json",
-    "commitCount": 42,
+    "head": "5f09239",
+    "lastCommitDate": "2026-09-15T00:41:55+03:00",
+    "lastCommitSubject": "Gate pushes on a current link-preview card and icon set",
+    "commitCount": 43,
     "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
