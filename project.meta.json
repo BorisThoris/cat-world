@@ -1,11 +1,11 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T20:45:56.925Z",
+  "generatedAt": "2026-09-14T20:59:07.424Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
-    "repoName": "cat-world-master-wt",
+    "repoName": "angular-cat-adoption-app-sync-wt",
     "packageName": "cat-world",
     "version": "0.0.0",
     "title": "Cat World",
@@ -54,7 +54,7 @@
   },
   "media": {
     "source": "repo-local",
-    "directory": "C:/Users/Gaming PC/AppData/Local/Temp/claude/cat-world-master-wt/project-media",
+    "directory": "C:/Users/Gaming PC/AppData/Local/Temp/claude/angular-cat-adoption-app-sync-wt/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
@@ -64,7 +64,7 @@
         "bytes": 151276,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-14T20:45:41.396Z"
+        "capturedAt": "2026-09-14T20:59:05.223Z"
       },
       {
         "profile": "desktop",
@@ -73,7 +73,7 @@
         "bytes": 146443,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-14T20:45:41.398Z"
+        "capturedAt": "2026-09-14T20:59:05.225Z"
       },
       {
         "profile": "full",
@@ -82,7 +82,7 @@
         "bytes": 124572,
         "width": 1440,
         "height": 910,
-        "capturedAt": "2026-09-14T20:45:41.400Z"
+        "capturedAt": "2026-09-14T20:59:05.227Z"
       },
       {
         "profile": "mobile",
@@ -91,7 +91,7 @@
         "bytes": 66859,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-14T20:45:41.409Z"
+        "capturedAt": "2026-09-14T20:59:05.230Z"
       },
       {
         "profile": "og",
@@ -100,7 +100,7 @@
         "bytes": 130665,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-14T20:45:41.412Z"
+        "capturedAt": "2026-09-14T20:59:05.231Z"
       }
     ]
   },
@@ -133,7 +133,7 @@
   "metrics": {
     "sourceFiles": 142,
     "testFiles": 30,
-    "sourceLines": 17215,
+    "sourceLines": 17232,
     "largestDirectories": [
       {
         "directory": "src",
@@ -163,11 +163,11 @@
   },
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
-    "branch": "meta/master-toolkit-cat",
-    "head": "e8161a0",
-    "lastCommitDate": "2026-09-14T23:45:42+03:00",
-    "lastCommitSubject": "Add the icon set and the one-command metadata refresh",
-    "commitCount": 37,
+    "branch": "meta/sync-c94782e",
+    "head": "426f820",
+    "lastCommitDate": "2026-09-14T23:45:57+03:00",
+    "lastCommitSubject": "Refresh project metadata for master",
+    "commitCount": 38,
     "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
