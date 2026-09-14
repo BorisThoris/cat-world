@@ -62,6 +62,13 @@ export default {
     "imageUrlPath": "/assets/og-image.jpg"
   },
 
+  // The icon set is rendered from favicon.svg by scripts/generate-app-icons.mjs.
+  icons: {
+    "background": "#4c0519",
+    "themeColor": "#4c0519",
+    "shortName": "Cat World"
+  },
+
   media: {
     sourceDir: path.join(portfolioRoot, "public", "project-shots", "cat-world", "latest"),
     publicPathPrefix: "/project-shots/cat-world/latest",
