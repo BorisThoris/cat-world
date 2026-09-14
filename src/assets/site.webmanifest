@@ -1,0 +1,28 @@
+{
+  "name": "Cat World",
+  "short_name": "Cat World",
+  "description": "An archived Angular adoption app preserved as an early full-stack-style portfolio sample with demo-safe backend boundaries.",
+  "start_url": "/assets/",
+  "scope": "/assets/",
+  "display": "standalone",
+  "background_color": "#4c0519",
+  "theme_color": "#4c0519",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
