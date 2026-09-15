@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T22:38:33.252Z",
+  "generatedAt": "2026-09-15T12:22:15.877Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -9,12 +9,13 @@
     "packageName": "cat-world",
     "version": "0.0.0",
     "title": "Cat World",
-    "subtitle": "Angular adoption archive",
-    "description": "An archived Angular adoption app preserved as an early full-stack-style portfolio sample with demo-safe backend boundaries.",
+    "subtitle": "An Angular adoption board for cats",
+    "description": "An Angular single-page app for listing cats up for adoption: browse profiles, post and edit your own listings, message other users, and manage accounts from an admin view. An early full-stack-style project preserved with demo-safe backend boundaries.",
     "tags": [
       "Angular",
-      "Archive",
-      "Mock Backend"
+      "Adoption",
+      "Messaging",
+      "Archive"
     ],
     "accent": "#e11d48",
     "classification": "web-app",
@@ -54,7 +55,7 @@
   },
   "media": {
     "source": "repo-local",
-    "directory": "/home/runner/work/cat-world/cat-world/project-media",
+    "directory": "C:/Users/Gaming PC/AppData/Local/Temp/claude/angular-cat-adoption-app-copy-wt/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
@@ -64,7 +65,7 @@
         "bytes": 150107,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-14T22:38:24.550Z"
+        "capturedAt": "2026-09-15T12:22:11.507Z"
       },
       {
         "profile": "desktop",
@@ -73,7 +74,7 @@
         "bytes": 145336,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-14T22:38:26.630Z"
+        "capturedAt": "2026-09-15T12:22:11.529Z"
       },
       {
         "profile": "full",
@@ -82,7 +83,7 @@
         "bytes": 123367,
         "width": 1440,
         "height": 910,
-        "capturedAt": "2026-09-14T22:38:30.847Z"
+        "capturedAt": "2026-09-15T12:22:11.541Z"
       },
       {
         "profile": "mobile",
@@ -91,7 +92,7 @@
         "bytes": 66087,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-14T22:38:28.716Z"
+        "capturedAt": "2026-09-15T12:22:11.555Z"
       },
       {
         "profile": "og",
@@ -100,7 +101,7 @@
         "bytes": 129950,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-14T22:38:33.090Z"
+        "capturedAt": "2026-09-15T12:22:11.616Z"
       }
     ]
   },
@@ -133,7 +134,7 @@
   "metrics": {
     "sourceFiles": 142,
     "testFiles": 30,
-    "sourceLines": 17252,
+    "sourceLines": 17296,
     "largestDirectories": [
       {
         "directory": "src",
@@ -163,12 +164,12 @@
   },
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
-    "branch": "master",
-    "head": "e372a68",
-    "lastCommitDate": "2026-09-15T01:07:37+03:00",
-    "lastCommitSubject": "Refresh screenshots, card, icons and metadata after every deployment",
-    "commitCount": 41,
-    "remote": "https://github.com/BorisThoris/cat-world"
+    "branch": "meta/copy-c94e349",
+    "head": "7335cab",
+    "lastCommitDate": "2026-09-15T01:51:55+03:00",
+    "lastCommitSubject": "Let the refresh wait up to 90 minutes for a queued Cloudflare build [meta-bot]",
+    "commitCount": 43,
+    "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
     "file": "README.md",
