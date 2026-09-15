@@ -1,7 +1,7 @@
 {
   "name": "Cat World",
   "short_name": "Cat World",
-  "description": "An archived Angular adoption app preserved as an early full-stack-style portfolio sample with demo-safe backend boundaries.",
+  "description": "An Angular single-page app for listing cats up for adoption: browse profiles, post and edit your own listings, message other users, and manage accounts from an admin view. An early full-stack-style project preserved with demo-safe backend boundaries.",
   "start_url": "/assets/",
   "scope": "/assets/",
   "display": "standalone",

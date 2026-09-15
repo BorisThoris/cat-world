@@ -18,12 +18,13 @@ export default {
 
   curated: {
     "title": "Cat World",
-    "subtitle": "Angular adoption archive",
-    "description": "An archived Angular adoption app preserved as an early full-stack-style portfolio sample with demo-safe backend boundaries.",
+    "subtitle": "An Angular adoption board for cats",
+    "description": "An Angular single-page app for listing cats up for adoption: browse profiles, post and edit your own listings, message other users, and manage accounts from an admin view. An early full-stack-style project preserved with demo-safe backend boundaries.",
     "tags": [
       "Angular",
-      "Archive",
-      "Mock Backend"
+      "Adoption",
+      "Messaging",
+      "Archive"
     ],
     "accent": "#e11d48",
     "deploymentUrl": "https://cat-world-git.pages.dev/",
@@ -57,6 +58,7 @@ export default {
   // Graph tags, and the static directory the image is published from.
   social: {
     "htmlFile": "src/index.html",
+    "pageTitle": "Cat World",
     "staticDir": "src/assets",
     "imageName": "og-image.jpg",
     "imageUrlPath": "/assets/og-image.jpg"

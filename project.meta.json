@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T22:07:24.516Z",
+  "generatedAt": "2026-09-15T12:15:32.187Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -9,12 +9,13 @@
     "packageName": "cat-world",
     "version": "0.0.0",
     "title": "Cat World",
-    "subtitle": "Angular adoption archive",
-    "description": "An archived Angular adoption app preserved as an early full-stack-style portfolio sample with demo-safe backend boundaries.",
+    "subtitle": "An Angular adoption board for cats",
+    "description": "An Angular single-page app for listing cats up for adoption: browse profiles, post and edit your own listings, message other users, and manage accounts from an admin view. An early full-stack-style project preserved with demo-safe backend boundaries.",
     "tags": [
       "Angular",
-      "Archive",
-      "Mock Backend"
+      "Adoption",
+      "Messaging",
+      "Archive"
     ],
     "accent": "#e11d48",
     "classification": "web-app",
@@ -133,7 +134,7 @@
   "metrics": {
     "sourceFiles": 143,
     "testFiles": 30,
-    "sourceLines": 17321,
+    "sourceLines": 17365,
     "largestDirectories": [
       {
         "directory": "src",
@@ -164,10 +165,10 @@
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
     "branch": "ai/refine-cat-world-cycle-02",
-    "head": "5f09239",
-    "lastCommitDate": "2026-09-15T00:41:55+03:00",
-    "lastCommitSubject": "Gate pushes on a current link-preview card and icon set",
-    "commitCount": 43,
+    "head": "eb5ed43",
+    "lastCommitDate": "2026-09-15T01:51:46+03:00",
+    "lastCommitSubject": "Let the refresh wait up to 90 minutes for a queued Cloudflare build [meta-bot]",
+    "commitCount": 45,
     "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
