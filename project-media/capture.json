@@ -1,6 +1,6 @@
 {
   "slug": "cat-world",
-  "capturedAt": "2026-09-14T22:38:33.121Z",
+  "capturedAt": "2026-09-15T12:42:13.177Z",
   "source": "deployment",
   "url": "https://cat-world-git.pages.dev/",
   "recipe": {
@@ -20,7 +20,7 @@
       "file": "desktop.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 145336,
+      "bytes": 145270,
       "status": "captured"
     },
     {
@@ -28,7 +28,7 @@
       "file": "mobile.jpg",
       "width": 430,
       "height": 932,
-      "bytes": 66087,
+      "bytes": 66059,
       "status": "captured"
     },
     {
@@ -36,7 +36,7 @@
       "file": "full.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 123367,
+      "bytes": 123312,
       "status": "captured"
     },
     {
@@ -44,7 +44,7 @@
       "file": "og.jpg",
       "width": 1200,
       "height": 630,
-      "bytes": 129950,
+      "bytes": 129965,
       "status": "captured"
     }
   ]
