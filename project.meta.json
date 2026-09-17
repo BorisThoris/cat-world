@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T12:15:32.187Z",
+  "generatedAt": "2026-09-17T10:25:43.687Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -62,46 +62,46 @@
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 151276,
+        "bytes": 115422,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-03T21:35:56.666Z"
+        "capturedAt": "2026-09-17T10:25:34.436Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 146443,
+        "bytes": 110745,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-03T21:36:02.916Z"
+        "capturedAt": "2026-09-17T10:25:36.396Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 124572,
+        "bytes": 95058,
         "width": 1440,
         "height": 910,
-        "capturedAt": "2026-09-03T21:36:07.179Z"
+        "capturedAt": "2026-09-17T10:25:40.352Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 66859,
+        "bytes": 52516,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-03T21:36:05.037Z"
+        "capturedAt": "2026-09-17T10:25:38.351Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 130665,
+        "bytes": 95098,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-03T21:36:09.272Z"
+        "capturedAt": "2026-09-17T10:25:42.355Z"
       }
     ]
   },
@@ -134,7 +134,7 @@
   "metrics": {
     "sourceFiles": 143,
     "testFiles": 30,
-    "sourceLines": 17365,
+    "sourceLines": 17363,
     "largestDirectories": [
       {
         "directory": "src",
@@ -165,10 +165,10 @@
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
     "branch": "ai/refine-cat-world-cycle-02",
-    "head": "eb5ed43",
-    "lastCommitDate": "2026-09-15T01:51:46+03:00",
-    "lastCommitSubject": "Let the refresh wait up to 90 minutes for a queued Cloudflare build [meta-bot]",
-    "commitCount": 45,
+    "head": "c94e349",
+    "lastCommitDate": "2026-09-15T15:22:04+03:00",
+    "lastCommitSubject": "Say what the app actually is: specific title, blurb and tags for the card",
+    "commitCount": 46,
     "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
