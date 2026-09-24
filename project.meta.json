@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T14:42:27.598Z",
+  "generatedAt": "2026-09-24T16:28:35.200Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -64,46 +64,46 @@
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 149994,
+        "bytes": 150158,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-24T14:42:19.706Z"
+        "capturedAt": "2026-09-24T16:28:20.050Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 145270,
+        "bytes": 145426,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-24T14:42:21.586Z"
+        "capturedAt": "2026-09-24T16:28:23.115Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 123400,
+        "bytes": 123425,
         "width": 1440,
         "height": 910,
-        "capturedAt": "2026-09-24T14:42:25.587Z"
+        "capturedAt": "2026-09-24T16:28:31.649Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 66052,
+        "bytes": 66209,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-24T14:42:23.674Z"
+        "capturedAt": "2026-09-24T16:28:27.115Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 129965,
+        "bytes": 130110,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-24T14:42:27.463Z"
+        "capturedAt": "2026-09-24T16:28:35.023Z"
       }
     ]
   },
@@ -136,7 +136,7 @@
   "metrics": {
     "sourceFiles": 143,
     "testFiles": 30,
-    "sourceLines": 17877,
+    "sourceLines": 17900,
     "largestDirectories": [
       {
         "directory": "src",
@@ -167,10 +167,10 @@
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
     "branch": "master",
-    "head": "c92262e",
-    "lastCommitDate": "2026-09-24T16:46:39+03:00",
+    "head": "78e8718",
+    "lastCommitDate": "2026-09-24T19:16:27+03:00",
     "lastCommitSubject": "Update the metadata toolkit scripts: trailers step, refresh --commit, capture.skip",
-    "commitCount": 49,
+    "commitCount": 51,
     "remote": "https://github.com/BorisThoris/cat-world"
   },
   "readme": {
