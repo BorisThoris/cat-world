@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T13:56:56.842Z",
+  "generatedAt": "2026-09-27T14:00:39.653Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -75,53 +75,53 @@
   },
   "media": {
     "source": "repo-local",
-    "directory": "C:/Users/GAMING~1/AppData/Local/Temp/media-rollout-f4ee0d/project-media",
+    "directory": "/home/runner/work/cat-world/cat-world/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 129029,
+        "bytes": 128525,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-27T13:56:04.105Z"
+        "capturedAt": "2026-09-27T14:00:11.475Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 124185,
+        "bytes": 123441,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-27T13:56:09.927Z"
+        "capturedAt": "2026-09-27T14:00:14.793Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 108078,
+        "bytes": 107321,
         "width": 1440,
         "height": 910,
-        "capturedAt": "2026-09-27T13:56:42.011Z"
+        "capturedAt": "2026-09-27T14:00:36.257Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 66732,
+        "bytes": 66090,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-27T13:56:30.073Z"
+        "capturedAt": "2026-09-27T14:00:32.981Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 102421,
+        "bytes": 101829,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-27T13:56:46.809Z"
+        "capturedAt": "2026-09-27T14:00:39.536Z"
       }
     ],
     "trailers": [
@@ -199,12 +199,12 @@
   },
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
-    "branch": "HEAD",
-    "head": "846c71f",
-    "lastCommitDate": "2026-09-24T16:28:35+00:00",
-    "lastCommitSubject": "Refresh screenshots, card, icons and metadata [meta-bot]",
-    "commitCount": 52,
-    "remote": "https://github.com/BorisThoris/cat-world.git"
+    "branch": "master",
+    "head": "528af54",
+    "lastCommitDate": "2026-09-27T16:57:03+03:00",
+    "lastCommitSubject": "A media strategy with tests: screenshots that show the app, a recorded trailer, a gated refresh",
+    "commitCount": 53,
+    "remote": "https://github.com/BorisThoris/cat-world"
   },
   "readme": {
     "file": "README.md",
