@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T16:28:35.200Z",
+  "generatedAt": "2026-09-27T13:56:56.842Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -49,61 +49,94 @@
       "icons:check",
       "meta:refresh",
       "trailers",
-      "trailers:check"
+      "trailers:check",
+      "test:media",
+      "test:media:e2e"
     ]
   },
   "capture": {
-    "route": "/"
+    "route": "/",
+    "actions": [
+      {
+        "type": "click",
+        "target": {
+          "role": "link",
+          "name": "All Cats"
+        },
+        "label": "open the adoption board",
+        "optional": true
+      },
+      {
+        "type": "wait",
+        "ms": 1500
+      }
+    ],
+    "waitAfterReadyMs": 800
   },
   "media": {
     "source": "repo-local",
-    "directory": "/home/runner/work/cat-world/cat-world/project-media",
+    "directory": "C:/Users/GAMING~1/AppData/Local/Temp/media-rollout-f4ee0d/project-media",
     "primary": "project-media/card.jpg",
     "images": [
       {
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 150158,
+        "bytes": 129029,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-09-24T16:28:20.050Z"
+        "capturedAt": "2026-09-27T13:56:04.105Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 145426,
+        "bytes": 124185,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-09-24T16:28:23.115Z"
+        "capturedAt": "2026-09-27T13:56:09.927Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 123425,
+        "bytes": 108078,
         "width": 1440,
         "height": 910,
-        "capturedAt": "2026-09-24T16:28:31.649Z"
+        "capturedAt": "2026-09-27T13:56:42.011Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 66209,
+        "bytes": 66732,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-09-24T16:28:27.115Z"
+        "capturedAt": "2026-09-27T13:56:30.073Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 130110,
+        "bytes": 102421,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-09-24T16:28:35.023Z"
+        "capturedAt": "2026-09-27T13:56:46.809Z"
+      }
+    ],
+    "trailers": [
+      {
+        "id": "tour",
+        "title": "Cat World: the adoption board",
+        "url": "https://cat-world-git.pages.dev/trailers/tour.mp4",
+        "poster": "https://cat-world-git.pages.dev/trailers/tour.jpg",
+        "file": "src/assets/trailers/tour.mp4",
+        "bytes": 992033,
+        "width": 1280,
+        "height": 720,
+        "duration": 20,
+        "orientation": "landscape",
+        "builtAt": "2026-09-27T13:54:59.580Z"
       }
     ]
   },
@@ -134,9 +167,9 @@
     "devDependencyCount": 19
   },
   "metrics": {
-    "sourceFiles": 143,
-    "testFiles": 30,
-    "sourceLines": 17900,
+    "sourceFiles": 146,
+    "testFiles": 32,
+    "sourceLines": 18766,
     "largestDirectories": [
       {
         "directory": "src",
@@ -144,7 +177,7 @@
       },
       {
         "directory": "scripts",
-        "files": 7
+        "files": 10
       },
       {
         "directory": "e2e",
@@ -166,12 +199,12 @@
   },
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
-    "branch": "master",
-    "head": "78e8718",
-    "lastCommitDate": "2026-09-24T19:16:27+03:00",
-    "lastCommitSubject": "Update the metadata toolkit scripts: trailers step, refresh --commit, capture.skip",
-    "commitCount": 51,
-    "remote": "https://github.com/BorisThoris/cat-world"
+    "branch": "HEAD",
+    "head": "846c71f",
+    "lastCommitDate": "2026-09-24T16:28:35+00:00",
+    "lastCommitSubject": "Refresh screenshots, card, icons and metadata [meta-bot]",
+    "commitCount": 52,
+    "remote": "https://github.com/BorisThoris/cat-world.git"
   },
   "readme": {
     "file": "README.md",

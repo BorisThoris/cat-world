@@ -1,10 +1,26 @@
 {
   "slug": "cat-world",
-  "capturedAt": "2026-09-24T16:28:35.057Z",
+  "capturedAt": "2026-09-27T13:56:48.477Z",
   "source": "deployment",
   "url": "https://cat-world-git.pages.dev/",
   "recipe": {
-    "route": "/"
+    "route": "/",
+    "actions": [
+      {
+        "type": "click",
+        "target": {
+          "role": "link",
+          "name": "All Cats"
+        },
+        "label": "open the adoption board",
+        "optional": true
+      },
+      {
+        "type": "wait",
+        "ms": 1500
+      }
+    ],
+    "waitAfterReadyMs": 800
   },
   "profiles": [
     {
@@ -12,40 +28,78 @@
       "file": "card.jpg",
       "width": 1600,
       "height": 900,
-      "bytes": 150158,
-      "status": "captured"
+      "bytes": 129029,
+      "status": "captured",
+      "stats": {
+        "mean": 181,
+        "std": 55,
+        "dark": 0,
+        "light": 0.253,
+        "colours": 46
+      }
     },
     {
       "profile": "desktop",
       "file": "desktop.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 145426,
-      "status": "captured"
+      "bytes": 124185,
+      "status": "captured",
+      "stats": {
+        "mean": 184,
+        "std": 58,
+        "dark": 0,
+        "light": 0.288,
+        "colours": 49
+      }
     },
     {
       "profile": "mobile",
       "file": "mobile.jpg",
       "width": 430,
       "height": 932,
-      "bytes": 66209,
-      "status": "captured"
+      "bytes": 66732,
+      "status": "captured",
+      "stats": {
+        "mean": 166,
+        "std": 64,
+        "dark": 0.003,
+        "light": 0.287,
+        "colours": 97
+      },
+      "skipped": [
+        "optional step skipped (open the adoption board): locator.click: Timeout 15000ms exceeded."
+      ]
     },
     {
       "profile": "full",
       "file": "full.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 123425,
-      "status": "captured"
+      "bytes": 108078,
+      "status": "captured",
+      "stats": {
+        "mean": 184,
+        "std": 58,
+        "dark": 0,
+        "light": 0.288,
+        "colours": 50
+      }
     },
     {
       "profile": "og",
       "file": "og.jpg",
       "width": 1200,
       "height": 630,
-      "bytes": 130110,
-      "status": "captured"
+      "bytes": 102421,
+      "status": "captured",
+      "stats": {
+        "mean": 213,
+        "std": 46,
+        "dark": 0,
+        "light": 0.432,
+        "colours": 37
+      }
     }
   ]
 }
