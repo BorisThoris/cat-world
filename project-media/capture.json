@@ -1,6 +1,6 @@
 {
   "slug": "cat-world",
-  "capturedAt": "2026-11-11T21:17:15.838Z",
+  "capturedAt": "2026-11-12T00:24:37.297Z",
   "source": "deployment",
   "url": "https://cat-world-git.pages.dev/",
   "recipe": {
@@ -28,14 +28,14 @@
       "file": "card.jpg",
       "width": 1600,
       "height": 900,
-      "bytes": 128924,
+      "bytes": 122112,
       "status": "captured",
       "stats": {
-        "mean": 181,
-        "std": 55,
+        "mean": 183,
+        "std": 56,
         "dark": 0,
-        "light": 0.254,
-        "colours": 48
+        "light": 0.281,
+        "colours": 43
       }
     },
     {
@@ -43,14 +43,14 @@
       "file": "desktop.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 123990,
+      "bytes": 117031,
       "status": "captured",
       "stats": {
-        "mean": 184,
-        "std": 58,
+        "mean": 186,
+        "std": 59,
         "dark": 0,
-        "light": 0.289,
-        "colours": 49
+        "light": 0.323,
+        "colours": 47
       }
     },
     {
@@ -58,14 +58,14 @@
       "file": "mobile.jpg",
       "width": 430,
       "height": 932,
-      "bytes": 66761,
+      "bytes": 64508,
       "status": "captured",
       "stats": {
-        "mean": 167,
-        "std": 63,
+        "mean": 166,
+        "std": 64,
         "dark": 0.003,
-        "light": 0.289,
-        "colours": 93
+        "light": 0.287,
+        "colours": 94
       },
       "skipped": [
         "optional step skipped (open the adoption board): locator.click: Timeout 15000ms exceeded."
@@ -76,14 +76,14 @@
       "file": "full.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 107626,
+      "bytes": 102833,
       "status": "captured",
       "stats": {
-        "mean": 184,
-        "std": 58,
+        "mean": 186,
+        "std": 59,
         "dark": 0,
-        "light": 0.29,
-        "colours": 50
+        "light": 0.323,
+        "colours": 47
       }
     },
     {
@@ -91,14 +91,14 @@
       "file": "og.jpg",
       "width": 1200,
       "height": 630,
-      "bytes": 102164,
+      "bytes": 94650,
       "status": "captured",
       "stats": {
-        "mean": 213,
+        "mean": 217,
         "std": 46,
         "dark": 0,
-        "light": 0.433,
-        "colours": 37
+        "light": 0.523,
+        "colours": 36
       }
     }
   ]
