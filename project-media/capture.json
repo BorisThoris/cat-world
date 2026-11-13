@@ -1,6 +1,6 @@
 {
   "slug": "cat-world",
-  "capturedAt": "2026-11-12T00:24:37.297Z",
+  "capturedAt": "2026-11-13T14:32:41.509Z",
   "source": "deployment",
   "url": "https://cat-world-git.pages.dev/",
   "recipe": {
@@ -28,14 +28,14 @@
       "file": "card.jpg",
       "width": 1600,
       "height": 900,
-      "bytes": 122112,
+      "bytes": 122564,
       "status": "captured",
       "stats": {
-        "mean": 183,
-        "std": 56,
+        "mean": 181,
+        "std": 55,
         "dark": 0,
-        "light": 0.281,
-        "colours": 43
+        "light": 0.257,
+        "colours": 46
       }
     },
     {
@@ -43,13 +43,13 @@
       "file": "desktop.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 117031,
+      "bytes": 117889,
       "status": "captured",
       "stats": {
-        "mean": 186,
-        "std": 59,
+        "mean": 184,
+        "std": 58,
         "dark": 0,
-        "light": 0.323,
+        "light": 0.291,
         "colours": 47
       }
     },
@@ -58,14 +58,14 @@
       "file": "mobile.jpg",
       "width": 430,
       "height": 932,
-      "bytes": 64508,
+      "bytes": 64726,
       "status": "captured",
       "stats": {
-        "mean": 166,
-        "std": 64,
+        "mean": 167,
+        "std": 63,
         "dark": 0.003,
         "light": 0.287,
-        "colours": 94
+        "colours": 90
       },
       "skipped": [
         "optional step skipped (open the adoption board): locator.click: Timeout 15000ms exceeded."
@@ -76,13 +76,13 @@
       "file": "full.jpg",
       "width": 1440,
       "height": 900,
-      "bytes": 102833,
+      "bytes": 103569,
       "status": "captured",
       "stats": {
-        "mean": 186,
-        "std": 59,
+        "mean": 184,
+        "std": 58,
         "dark": 0,
-        "light": 0.323,
+        "light": 0.292,
         "colours": 47
       }
     },
@@ -91,13 +91,13 @@
       "file": "og.jpg",
       "width": 1200,
       "height": 630,
-      "bytes": 94650,
+      "bytes": 94972,
       "status": "captured",
       "stats": {
-        "mean": 217,
+        "mean": 213,
         "std": 46,
         "dark": 0,
-        "light": 0.523,
+        "light": 0.438,
         "colours": 36
       }
     }

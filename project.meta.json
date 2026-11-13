@@ -1,7 +1,7 @@
 {
   "$schema": "./scripts/project.meta.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T00:24:38.387Z",
+  "generatedAt": "2026-11-13T14:32:42.642Z",
   "generatedBy": "scripts/generate-project-meta.mjs",
   "identity": {
     "slug": "cat-world",
@@ -82,46 +82,46 @@
         "profile": "card",
         "file": "card.jpg",
         "path": "project-media/card.jpg",
-        "bytes": 122112,
+        "bytes": 122564,
         "width": 1600,
         "height": 900,
-        "capturedAt": "2026-11-12T00:23:32.335Z"
+        "capturedAt": "2026-11-13T14:31:58.499Z"
       },
       {
         "profile": "desktop",
         "file": "desktop.jpg",
         "path": "project-media/desktop.jpg",
-        "bytes": 117031,
+        "bytes": 117889,
         "width": 1440,
         "height": 900,
-        "capturedAt": "2026-11-12T00:23:43.951Z"
+        "capturedAt": "2026-11-13T14:32:05.411Z"
       },
       {
         "profile": "full",
         "file": "full.jpg",
         "path": "project-media/full.jpg",
-        "bytes": 102833,
+        "bytes": 103569,
         "width": 1440,
         "height": 910,
-        "capturedAt": "2026-11-12T00:24:23.167Z"
+        "capturedAt": "2026-11-13T14:32:33.991Z"
       },
       {
         "profile": "mobile",
         "file": "mobile.jpg",
         "path": "project-media/mobile.jpg",
-        "bytes": 64508,
+        "bytes": 64726,
         "width": 430,
         "height": 932,
-        "capturedAt": "2026-11-12T00:24:09.507Z"
+        "capturedAt": "2026-11-13T14:32:26.307Z"
       },
       {
         "profile": "og",
         "file": "og.jpg",
         "path": "project-media/og.jpg",
-        "bytes": 94650,
+        "bytes": 94972,
         "width": 1200,
         "height": 630,
-        "capturedAt": "2026-11-12T00:24:36.603Z"
+        "capturedAt": "2026-11-13T14:32:40.855Z"
       }
     ],
     "trailers": [
@@ -131,12 +131,12 @@
         "url": "https://cat-world-git.pages.dev/trailers/tour.mp4",
         "poster": "https://cat-world-git.pages.dev/trailers/tour.jpg",
         "file": "src/assets/trailers/tour.mp4",
-        "bytes": 992033,
+        "bytes": 804648,
         "width": 1280,
         "height": 720,
         "duration": 20,
         "orientation": "landscape",
-        "builtAt": "2026-09-27T13:54:59.580Z"
+        "builtAt": "2026-11-13T14:30:30.593Z"
       }
     ]
   },
@@ -169,7 +169,7 @@
   "metrics": {
     "sourceFiles": 146,
     "testFiles": 32,
-    "sourceLines": 18766,
+    "sourceLines": 18764,
     "largestDirectories": [
       {
         "directory": "src",
@@ -200,10 +200,10 @@
   "analysisNotes": "Older Angular adoption app, useful as an archive demo but lower priority due to dated framework and narrower surface.",
   "git": {
     "branch": "master",
-    "head": "d52c608",
-    "lastCommitDate": "2026-11-12T01:35:12+02:00",
-    "lastCommitSubject": "Republish the link-preview card from the new screenshots",
-    "commitCount": 58,
+    "head": "85b2251",
+    "lastCommitDate": "2026-11-13T15:44:08+02:00",
+    "lastCommitSubject": "Drop two dead AngularJS toastr links from index.html",
+    "commitCount": 60,
     "remote": "https://github.com/BorisThoris/cat-world"
   },
   "readme": {
